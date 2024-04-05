@@ -11,8 +11,9 @@ void main() {
   */ 
 
   
-  /* NON-HOT RELOAD:
+   //NON-HOT RELOAD:
   
+  /*
   //Use text widgets:
   runApp(MaterialApp(
     home: Material(
@@ -32,31 +33,35 @@ void main() {
 
   */
   runApp(MyApp());
+  
 }
 
 // Create your own methods:
+/*
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Text('olis');
+
+  }
+}
+*/
+
+// USE HOT RELOAD:
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
       home: Material(
-        child: Column(
-
-        children: [
-          /* CHILDREN & COLUMNS: allow
-           to create a 'list' of
-          elements .*/ 
-          Text('text 1'),
-          Text('text 2'),
-          Text('olis'),
-          
-        ],
+        child: Column(children: [
+          Text('holis'),
+          Text('crayolis'),
+        ],)
       ),
-    ),
-  ));
+    );
   }
 
 }
