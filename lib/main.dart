@@ -56,13 +56,62 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // Use Scaffold Widget instead of Material:
       home: Scaffold(
-        Colors.white,
+        backgroundColor: Colors.white,
         body: Column( // in Scaffold 'child' changes to 'body'.
           // ALIGN ITEMS -> CSS
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
           Text('hello again!'),
           Text('Login to Continue'),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'enter your username...'
+              ),
+          ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: "enter your password..."
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              print('Button clicked.');
+            }, 
+            child: Text('New to Bejoy? Register!',
+              style: TextStyle(
+                color: Colors.black,
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: ()
+          {
+            print('Log In Pressed');
+          },
+           child: Text('Go!',
+              style: TextStyle(
+              color: Colors.black,
+           ),
+           ),
+           
+           style: ButtonStyle(
+            
+            backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.yellow[500])
+           ),
+
+           ),
+           ElevatedButton(onPressed: () {
+            print('Logged with Google');
+           }, 
+           child: Text('Use Google instead',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w200
+            )
+           ),
+           
+           ),
+           
         ],
         ),
       ),
