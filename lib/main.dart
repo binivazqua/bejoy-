@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterin/components/textField.dart';
 
 void main() {
   // Change the background color:
@@ -57,22 +58,21 @@ class MyApp extends StatelessWidget {
       // Use Scaffold Widget instead of Material:
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Column( // in Scaffold 'child' changes to 'body'.
+        body: loginBlock(),
+      ),
+    );
+  }
+
+  Center loginBlock() {
+    return Center(
+      child: Column( // in Scaffold 'child' changes to 'body'.
           // ALIGN ITEMS -> CSS
-          //mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Text('hello again!'),
+          Text('Hello again!'),
           Text('Login to Continue'),
-          TextField(
-            decoration: InputDecoration(
-              hintText: 'enter your username...'
-              ),
-          ),
-          TextField(
-            decoration: InputDecoration(
-              hintText: "enter your password..."
-            ),
-          ),
+          textField(),
+          textField(),
           TextButton(
             onPressed: () {
               print('Button clicked.');
@@ -93,28 +93,12 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
            ),
            ),
-           
            style: ButtonStyle(
-            
             backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.yellow[500])
            ),
-
            ),
-           ElevatedButton(onPressed: () {
-            print('Logged with Google');
-           }, 
-           child: Text('Use Google instead',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w200
-            )
-           ),
-           
-           ),
-           
         ],
         ),
-      ),
     );
   }
 
