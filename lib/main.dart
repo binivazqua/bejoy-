@@ -92,8 +92,8 @@ class MyApp extends StatelessWidget {
               color: Colors.black,
             )
           ),
-          textField(),
-          textField(),
+          textField(hintDesiredText: 'Username'),
+          textField(hintDesiredText: 'Password'),
           TextButton(
             onPressed: () {
               print('Button clicked.');

@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class textField extends StatelessWidget{
+  final String hintDesiredText;
+
+  const textField ({
+    super.key,
+    required this.hintDesiredText,
+  });
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -16,7 +22,7 @@ class textField extends StatelessWidget{
                   borderSide: BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                hintText: 'enter your username...',
+                hintText: hintDesiredText,
                 hintStyle: TextStyle(
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.w300,
