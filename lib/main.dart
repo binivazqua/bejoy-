@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutterin/blocks/loginPage.dart';
 import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/textField.dart';
 
@@ -14,44 +15,10 @@ void main() {
   - MaterialApp() requires Material() widgets.
   */ 
 
-  
-   //NON-HOT RELOAD:
-  
-  /*
-  //Use text widgets:
-  runApp(MaterialApp(
-    home: Material(
-      child: Column(
-
-        children: [
-          /* CHILDREN & COLUMNS: allow
-           to create a 'list' of
-          elements .*/ 
-          Text('text 1'),
-          Text('text 2'),
-          MyApp()
-        ]
-      ),
-    ),
-  ));
-
-  */
   runApp(MyApp());
   
 }
 
-// Create your own methods:
-/*
-class MyApp extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Text('olis');
-
-  }
-}
-*/
 
 class MyApp extends StatelessWidget {
   @override
@@ -61,83 +28,8 @@ class MyApp extends StatelessWidget {
       // Use Scaffold Widget instead of Material:
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: loginBlock(),
+        body: loginPage(),
       ),
-    );
-  }
-
-  Center loginBlock() {
-    return Center(
-      child: Column( // in Scaffold 'child' changes to 'body'.
-          // ALIGN ITEMS -> CSS
-      
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.all(5.0),
-              child: Icon(
-              Icons.interests,
-              size: 100,
-              color: Colors.purple[100],
-              
-                        ),
-            ),
-          Text('Hello again!',
-            style: TextStyle(
-              color: Colors.black,
-            )
-          ),
-          Text('Login to Continue',
-            style: TextStyle(
-              color: Colors.black,
-            )
-          ),
-          textField(hintDesiredText: 'Username'),
-          textField(hintDesiredText: 'Password'),
-          TextButton(
-            onPressed: () {
-              print('Button clicked.');
-            }, 
-            child: Text('New to Bejoy? Register!',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 12,
-                fontStyle: FontStyle.italic,
-              ),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: ()
-          {
-            print('Log In Pressed');
-          },
-           child: Text('Go!',
-              style: TextStyle(
-              color: Colors.black,
-           ),
-           ),
-           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.yellow[500])
-           ),
-           ),
-           Text('or ontinue with',
-              style: TextStyle(
-                fontSize: 12,
-                height: 3,
-              ),
-           ),
-           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              logoTile(imagePath:'lib/images/google.png'),
-              SizedBox(width: 20.0),
-              logoTile(imagePath: 'lib/images/apple.png')
-            ],
-           ),
-
-
-        ],
-        ),
     );
   }
 
