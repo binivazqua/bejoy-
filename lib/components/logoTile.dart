@@ -12,9 +12,21 @@ class logoTile extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      child: Image.asset(imagePath),
-      height: 50,
-      color: Colors.grey[600],   
+      padding: EdgeInsets.all(5),
+      
+      decoration: BoxDecoration(
+        color: Colors.yellow,
+        border: Border.all(
+          color:Colors.yellow,
+        ),
+        borderRadius: BorderRadius.circular(10),
+      
+      ),
+      child: Image.asset(imagePath,
+        height: 50,
+        color: Colors.orange[300],
+      ),
+         
 
     );
   }

@@ -130,7 +130,8 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               logoTile(imagePath:'lib/images/google.png'),
-              logoTile(imagePath: 'lib/images/pple.png')
+              SizedBox(width: 20.0),
+              logoTile(imagePath: 'lib/images/apple.png')
             ],
            ),
 
