@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/textField.dart';
 
 void main() {
@@ -67,10 +70,28 @@ class MyApp extends StatelessWidget {
     return Center(
       child: Column( // in Scaffold 'child' changes to 'body'.
           // ALIGN ITEMS -> CSS
+      
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Text('Hello again!'),
-          Text('Login to Continue'),
+            Padding(
+              padding: EdgeInsets.all(5.0),
+              child: Icon(
+              Icons.interests,
+              size: 100,
+              color: Colors.purple[100],
+              
+                        ),
+            ),
+          Text('Hello again!',
+            style: TextStyle(
+              color: Colors.black,
+            )
+          ),
+          Text('Login to Continue',
+            style: TextStyle(
+              color: Colors.black,
+            )
+          ),
           textField(),
           textField(),
           TextButton(
@@ -80,6 +101,8 @@ class MyApp extends StatelessWidget {
             child: Text('New to Bejoy? Register!',
               style: TextStyle(
                 color: Colors.black,
+                fontSize: 12,
+                fontStyle: FontStyle.italic,
               ),
             ),
           ),
@@ -97,6 +120,21 @@ class MyApp extends StatelessWidget {
             backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.yellow[500])
            ),
            ),
+           Text('or ontinue with',
+              style: TextStyle(
+                fontSize: 12,
+                height: 3,
+              ),
+           ),
+           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              logoTile(imagePath:'lib/images/google.png'),
+              logoTile(imagePath: 'lib/images/pple.png')
+            ],
+           ),
+
+
         ],
         ),
     );
