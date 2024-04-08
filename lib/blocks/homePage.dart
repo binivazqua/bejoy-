@@ -8,9 +8,12 @@ class homePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: Center(
-        child: Text('Hello again, User!'),
-      )
+      appBar: AppBar(
+        title: Text('Bejoy'),
+      ),
+      body: Container(
+        
+        ),
     );
   }
   

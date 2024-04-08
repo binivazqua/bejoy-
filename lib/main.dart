@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutterin/blocks/homePage.dart';
 import 'package:flutterin/blocks/loginPage.dart';
 import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/textField.dart';
@@ -30,6 +31,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         body: loginPage(),
       ),
+      routes: {
+        '/' : (context) => loginPage(),
+        '/home' : (context) => homePage(),
+      },
     );
   }
 
