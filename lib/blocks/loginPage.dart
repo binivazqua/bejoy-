@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/homePage.dart';
+import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/textField.dart';
 
@@ -67,8 +68,7 @@ class loginPage extends StatelessWidget {
                 {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) {
-                      return homePage();
-                      
+                      return navHomePage();
 
                         
                      }

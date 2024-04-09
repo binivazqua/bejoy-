@@ -2,9 +2,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterin/pages/chat.dart';
-import 'package:flutterin/pages/eng.dart';
 import 'package:flutterin/pages/home.dart';
 import 'package:flutterin/pages/star.dart';
+import 'package:flutterin/pages/user.dart';
 
 class navHomePage extends StatefulWidget {
   const navHomePage ({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _navHomePage extends State<navHomePage>{
   final List<Widget> pages = [
     UserHome(),
     StarPage(),
-    EnginePage(),
+    ProfilePage(),
     ChatPage(),
   ];
   @override
@@ -51,7 +51,7 @@ class _navHomePage extends State<navHomePage>{
           ),
           Icon(Icons.star_border_rounded
           ),
-          Icon(Icons.settings
+          Icon(Icons.person
           ),
           Icon(Icons.message
           ),

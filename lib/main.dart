@@ -29,13 +29,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // Use Scaffold Widget instead of Material:
       home: loginPage(),
-      
-      /*
-      Scaffold(
-        backgroundColor: Colors.white,
-        body: loginPage(),
-      ),
-      */
       /*
       routes: {
         '/' : (context) => loginPage(),
@@ -47,35 +40,3 @@ class MyApp extends StatelessWidget {
 
 }
 
-// USE HOT RELOAD: (with Scaffold)
-
-class MyAppScaffold extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      // Use Scaffold Widget instead of Material:
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.yellow[300],
-        ),
-        floatingActionButton: FloatingActionButton(onPressed: () {}),
-        backgroundColor: Colors.white,
-        drawer: Container(
-          width: 200,
-          height: 500,
-          color: Colors.white,
-        ),
-        body: Column( // in Scaffold 'child' changes to 'body'.
-          // ALIGN ITEMS -> CSS
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-          Text('hello again!'),
-          Text('Login to Continue'),
-        ],
-        ),
-      ),
-    );
-  }
-
-}
