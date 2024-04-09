@@ -108,7 +108,9 @@ class ProfilePage extends StatelessWidget {
                 shrinkWrap: true,
                 childAspectRatio: 1/1.5,
                 children:[
-                  Icon(Icons.headphones),
+                  Icon(Icons.headphones,
+                    
+                  ),
                   Icon(Icons.headphones),
                   
 
