@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterin/blocks/homePage.dart';
 import 'package:flutterin/blocks/loginPage.dart';
+import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/textField.dart';
 
@@ -27,14 +28,19 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // Use Scaffold Widget instead of Material:
-      home: Scaffold(
+      home: navHomePage(),
+      
+      /*Scaffold(
         backgroundColor: Colors.white,
         body: loginPage(),
       ),
+      */
+      /*
       routes: {
         '/' : (context) => loginPage(),
-        '/home' : (context) => homePage(),
+        '/home' : (context) => const homePage(),
       },
+      */
     );
   }
 

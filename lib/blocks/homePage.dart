@@ -12,7 +12,7 @@ class homePage extends StatelessWidget {
         title: Text('Bejoy'),
       ),
       body: Container(
-        
+          child: Text('Holis')
         ),
     );
   }
