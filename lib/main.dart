@@ -28,9 +28,10 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // Use Scaffold Widget instead of Material:
-      home: navHomePage(),
+      home: loginPage(),
       
-      /*Scaffold(
+      /*
+      Scaffold(
         backgroundColor: Colors.white,
         body: loginPage(),
       ),
