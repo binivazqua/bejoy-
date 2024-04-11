@@ -5,7 +5,7 @@ import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/textField.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage ({Key? key}) : super(key: key);
+  const HomePage ({super.key});
   
   @override
   _HomePageState createState() => _HomePageState();
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage>{
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.all(5.0),
                       child: Icon(
                       Icons.interests,
                       size: 100,
@@ -37,12 +37,12 @@ class _HomePageState extends State<HomePage>{
                       
                                 ),
                     ),
-                  Text('Hello again!',
+                  const Text('Hello again!',
                     style: TextStyle(
                       color: Colors.black,
                     )
                   ),
-                  Text('Login to Continue',
+                  const Text('Login to Continue',
                     style: TextStyle(
                       color: Colors.black,
                     )
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage>{
                     onPressed: () {
                       print('Button clicked.');
                     }, 
-                    child: Text('New to Bejoy? Register!',
+                    child: const Text('New to Bejoy? Register!',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 12,
@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage>{
                   {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) {
-                        return homePage();
+                        return const homePage();
                         
                           
                        }
@@ -85,22 +85,22 @@ class _HomePageState extends State<HomePage>{
                       );
                     
                   },
-                   child: Text('Go!',
+                   style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.yellow[500])
+                   ),
+                   child: const Text('Go!',
                       style: TextStyle(
                       color: Colors.black,
                    ),
                    ),
-                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.resolveWith((states) => Colors.yellow[500])
                    ),
-                   ),
-                   Text('or ontinue with',
+                   const Text('or ontinue with',
                       style: TextStyle(
                         fontSize: 12,
                         height: 3,
                       ),
                    ),
-                   Row(
+                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       logoTile(imagePath:'lib/images/google.png'),

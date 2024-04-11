@@ -9,10 +9,10 @@ class homePage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bejoy'),
+        title: const Text('Bejoy'),
       ),
       body: Container(
-          child: Text('Holis')
+          child: const Text('Holis')
         ),
     );
   }

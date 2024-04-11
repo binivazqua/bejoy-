@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutterin/blocks/homePage.dart';
 import 'package:flutterin/blocks/loginPage.dart';
-import 'package:flutterin/blocks/navHomePage.dart';
-import 'package:flutterin/components/logoTile.dart';
-import 'package:flutterin/components/textField.dart';
 
 void main() {
   // Change the background color:
@@ -17,12 +11,14 @@ void main() {
   - MaterialApp() requires Material() widgets.
   */ 
 
-  runApp(MyApp());
+  runApp(const MyApp());
   
 }
 
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

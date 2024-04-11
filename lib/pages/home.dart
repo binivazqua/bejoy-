@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class UserHome extends StatelessWidget {
+  const UserHome({super.key});
+
   
   
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
+    return const Center(
       child: Text(
         'Home',
         style: TextStyle(

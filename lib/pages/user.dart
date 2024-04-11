@@ -1,14 +1,13 @@
-import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutterin/blocks/subblocks/dragscroll.dart';
 
 class ProfilePage extends StatelessWidget {
 
   const ProfilePage ({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
   
   
   @override
@@ -55,13 +54,13 @@ class ProfilePage extends StatelessWidget {
                   
                   alignment: Alignment.bottomRight,
                   children: [ 
-                    CircleAvatar(
+                    const CircleAvatar(
                     radius: 50,
                     
                     ),
                     InkWell(
                       onTap: (){},
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         backgroundColor: Colors.orange,
                         radius: 12,
                         child: Icon(
@@ -75,11 +74,11 @@ class ProfilePage extends StatelessWidget {
                 
                 ]),
 
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+                const Padding(
+                  padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
                   child: Text('Username Profile', style: TextStyle(fontWeight: FontWeight.w600),),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
@@ -88,7 +87,7 @@ class ProfilePage extends StatelessWidget {
                             fontWeight: FontWeight.w200
                         ),
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 15,
                       ),
                       Text('My Awards', style: TextStyle(
@@ -102,19 +101,32 @@ class ProfilePage extends StatelessWidget {
               ]),
           ),
           const SizedBox(height: 8),
-         GridView(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+         Expanded(
+          
+           child: GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  
+                ),
+
+                physics: ScrollPhysics() ,
+                children: [
+                  myBox('Holis', Icons.abc),
+                  myBox('Holis', Icons.abc),
+                  myBox('Holis', Icons.abc),
+                  myBox('Holis', Icons.abc),
+                  myBox('Holis', Icons.abc),
+                  myBox('Holis', Icons.abc),
+                  myBox('Holis', Icons.abc),
+
+
+                  
+
+           
+           
+                ]
               ),
-              children: [
-                myBox('Holis'),
-                myBox('Holis'),
-                myBox('Holis'),
-                myBox('Holis'),
-
-
-              ]
-            ),
+         ),
 
 
             
@@ -133,12 +145,37 @@ class ProfilePage extends StatelessWidget {
   
 }
 
-Widget myBox (String thing) {
+Widget myBox (String thing, IconData icon) {
   return Container(
-    margin: const EdgeInsets.all(8),
-    color: Colors.yellow[300],
+    
     alignment: Alignment.center,
-    child: Text(thing)
+    child: Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        
+        width: 150,
+        decoration: BoxDecoration(
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Column(
+          
+          children: [
+              Expanded(
+                child: FittedBox(
+                  child: Icon(icon)
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: Text(thing,
+                style: TextStyle()),
+              ),
+          ],
+        ),
+      ),
+    ),
+    
 
   );
 }

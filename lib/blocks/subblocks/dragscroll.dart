@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DraggableScroll extends StatelessWidget {
-  const DraggableScroll({Key? key}) : super(key: key);
+  const DraggableScroll({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class DraggableScroll extends StatelessWidget {
             controller: scrollController,
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return ListTile(
+              return const ListTile(
                 
               );
             }

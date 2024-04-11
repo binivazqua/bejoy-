@@ -22,15 +22,15 @@ class textField extends StatelessWidget{
               obscureText: obscureText,
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black),
+                  borderSide: const BorderSide(color: Colors.black),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 hintText: hintDesiredText,
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.w300,
                   fontSize: 13

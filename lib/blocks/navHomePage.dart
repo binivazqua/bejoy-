@@ -7,7 +7,7 @@ import 'package:flutterin/pages/star.dart';
 import 'package:flutterin/pages/user.dart';
 
 class navHomePage extends StatefulWidget {
-  const navHomePage ({Key? key}) : super(key: key);
+  const navHomePage ({super.key});
   
   @override
   _navHomePage createState() => _navHomePage();
@@ -27,10 +27,10 @@ class _navHomePage extends State<navHomePage>{
   /* ++++++++++++++ CREATE PAGES ++++++++++++++++ */
 
   final List<Widget> pages = [
-    UserHome(),
-    StarPage(),
-    ProfilePage(),
-    ChatPage(),
+    const UserHome(),
+    const StarPage(),
+    const ProfilePage(),
+    const ChatPage(),
   ];
   @override
   Widget build(Object context) {
@@ -43,10 +43,10 @@ class _navHomePage extends State<navHomePage>{
         onTap: _navigatedBottomBar, 
         
         backgroundColor: Colors.white,
-        color: Color.fromRGBO(255, 249, 81, 1),
-        animationDuration: Duration(milliseconds: 300),
+        color: const Color.fromRGBO(255, 249, 81, 1),
+        animationDuration: const Duration(milliseconds: 300),
        
-        items: [
+        items: const [
           Icon(Icons.home
           ),
           Icon(Icons.star_border_rounded

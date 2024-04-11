@@ -12,7 +12,7 @@ class logoTile extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(5),
       
       decoration: BoxDecoration(
         color: Colors.yellow,
