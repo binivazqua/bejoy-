@@ -1,5 +1,8 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutterin/blocks/subblocks/dragscroll.dart';
 
 class ProfilePage extends StatelessWidget {
 
@@ -99,24 +102,25 @@ class ProfilePage extends StatelessWidget {
               ]),
           ),
           const SizedBox(height: 8),
-          Container(
-            color: Colors.pink[100],
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: 
-            Column(children: [
-                GridView.count(crossAxisCount: 2,
-                shrinkWrap: true,
-                childAspectRatio: 1/1.5,
-                children:[
-                  Icon(Icons.headphones,
-                    
-                  ),
-                  Icon(Icons.headphones),
-                  
+         GridView(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+              ),
+              children: [
+                myBox('Holis'),
+                myBox('Holis'),
+                myBox('Holis'),
+                myBox('Holis'),
 
-                ])
-            ],)
-          ),
+
+              ]
+            ),
+
+
+            
+
+            
+          
           
       ],
     ),
@@ -128,3 +132,32 @@ class ProfilePage extends StatelessWidget {
   }
   
 }
+
+Widget myBox (String thing) {
+  return Container(
+    margin: const EdgeInsets.all(8),
+    color: Colors.yellow[300],
+    alignment: Alignment.center,
+    child: Text(thing)
+
+  );
+}
+
+/*
+
+Widget _contentServices(){
+  List <ModelServices> = List();
+  listServices.add(new ModelServices(title: "Send\nMoney", img: "send.png"));
+  listServices.add(new ModelServices(title: "Send\nMoney", img: "send.png"));
+  listServices.add(new ModelServices(title: "Send\nMoney", img: "send.png"));
+  listServices.add(new ModelServices(title: "Send\nMoney", img: "send.png"));
+  listServices.add(new ModelServices(title: "Send\nMoney", img: "send.png"));
+
+}
+
+class ModelServices {
+  String title, img;
+  // ignore: use_function_type_syntax_for_parameters
+  ModelServices({required this.title, required this.img});
+}
+*/

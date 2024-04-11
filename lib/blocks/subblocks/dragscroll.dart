@@ -9,12 +9,14 @@ class DraggableScroll extends StatelessWidget {
     return DraggableScrollableSheet(
       builder: (BuildContext context, ScrollController scrollController) {
         return Container(
-          color: Colors.grey[50],
+          color: Colors.red,
           child: ListView.builder(
             controller: scrollController,
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return ListTile();
+              return ListTile(
+                
+              );
             }
 
           )
