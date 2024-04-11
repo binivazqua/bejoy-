@@ -52,7 +52,7 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Stack(
                   
-                  alignment: Alignment.bottomRight,
+                  alignment: Alignment.bottomLeft,
                   children: [ 
                     const CircleAvatar(
                     radius: 50,
@@ -102,8 +102,9 @@ class ProfilePage extends StatelessWidget {
           ),
           const SizedBox(height: 8),
          Expanded(
-          
+           
            child: GridView(
+              
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   
@@ -111,13 +112,19 @@ class ProfilePage extends StatelessWidget {
 
                 physics: ScrollPhysics() ,
                 children: [
-                  myBox('Holis', Icons.abc),
-                  myBox('Holis', Icons.abc),
-                  myBox('Holis', Icons.abc),
-                  myBox('Holis', Icons.abc),
-                  myBox('Holis', Icons.abc),
-                  myBox('Holis', Icons.abc),
-                  myBox('Holis', Icons.abc),
+                  myBox('Award 1', Icons.star_outline_rounded, Colors.yellow),
+                  myBox('Award 2', Icons.star_outline_rounded, Colors.pink),
+                  myBox('Award 3', Icons.star_outline_rounded, Colors.purple),
+                  myBox('Award 4', Icons.star_outline_rounded, Colors.blue),
+                  myBox('Award 5', Icons.star_outline_rounded, Colors.orange),
+                  myBox('Award 6', Icons.star_outline_rounded, Colors.yellow),
+                  myBox('Award', Icons.star_outline_rounded, Colors.pink),
+                  myBox('Award', Icons.star_outline_rounded, Colors.purple),
+                  myBox('Award', Icons.star_outline_rounded, Colors.yellow),
+
+
+                  
+
 
 
                   
@@ -145,7 +152,7 @@ class ProfilePage extends StatelessWidget {
   
 }
 
-Widget myBox (String thing, IconData icon) {
+Widget myBox (String thing, IconData icon, Color color) {
   return Container(
     
     alignment: Alignment.center,
@@ -163,7 +170,7 @@ Widget myBox (String thing, IconData icon) {
           children: [
               Expanded(
                 child: FittedBox(
-                  child: Icon(icon)
+                  child: Icon(icon, color: color,)
                 ),
               ),
               Padding(
