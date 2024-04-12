@@ -1,6 +1,8 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
 
 class UserHome extends StatelessWidget {
@@ -121,17 +123,43 @@ class UserHome extends StatelessWidget {
                     utilContainer(text: 'Love', icon: Icons.favorite),
                     utilContainer(text: 'Love', icon: Icons.favorite),
 
-
-                    
-
-
-
-                    
-
-
                   ],
                 ),
-              )
+              ),
+
+              SizedBox(height: 25),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 1.5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Nuestros especialistas',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    )),
+                    Text('Ver todos', style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.grey[600],
+                      
+                    ))
+                  ],),
+                ),
+
+                SizedBox(height: 25),
+
+                Expanded(
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      drProfileCard(),
+                      
+                    ],
+                  )
+                  ),
+
+               
             ]
           ),
         ),
