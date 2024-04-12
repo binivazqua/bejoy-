@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:flutterin/components/utils.dart';
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
@@ -46,7 +49,7 @@ class UserHome extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
-                  color: Colors.grey[300],
+                  color: Colors.orange[300],
                   borderRadius: BorderRadius.circular(15)
                 ),
                 child: Row(
@@ -67,27 +70,68 @@ class UserHome extends StatelessWidget {
                         children: [
                            Text('How are you feeling?', style: TextStyle(fontWeight: FontWeight.bold)),
                            Text('Track your mood now.'),
-                           Container(
-                            child:
-                              Center(
-                                child: Text('Go!')
+                           
+                           SizedBox(height: 10),
+                              Container(
+                                alignment: Alignment.center,
+                                padding: EdgeInsets.all(3),
+                                width: 50,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.grey,
                                 ),
+                                child: Center(
+                                  child: Text('Go!')
+                                  ),
                             )
-                      
                         ]
-                       
                       ),
                     ),
                   ]
-                  // cute emoji
-
-                
-
                 ),
               ),
               // card
-          
+              SizedBox(height: 25),
+              Container(
+                padding: EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.grey[100],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.tag_faces_outlined),
+                    border: InputBorder.none,
+                    hintText: 'How can we help you?', hintStyle: TextStyle(fontSize: 13, )
+                  ),
+                ),
+              ),
               // horizontal listview --> type of professional
+              SizedBox(height: 25),
+
+              Container(
+                height: 80,
+                
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    utilContainer(text: 'Love', icon: Icons.favorite),
+                    utilContainer(text: 'Love', icon: Icons.favorite),
+                    utilContainer(text: 'Love', icon: Icons.favorite),
+                    utilContainer(text: 'Love', icon: Icons.favorite),
+                    utilContainer(text: 'Love', icon: Icons.favorite),
+
+
+                    
+
+
+
+                    
+
+
+                  ],
+                ),
+              )
             ]
           ),
         ),
