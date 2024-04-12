@@ -154,7 +154,9 @@ class UserHome extends StatelessWidget {
                     scrollDirection: Axis.vertical,
                     children: [
                       drProfileCard(),
-                      
+                      drProfileCard(),
+                      drProfileCard(),
+                      drProfileCard(),
                     ],
                   )
                   ),
