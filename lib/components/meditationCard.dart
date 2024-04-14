@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 class meditationCard extends StatelessWidget {
-
-  const meditationCard({Key? key}) : super (key: key);
+  final String meditation;
+  
+  const meditationCard({
+    super.key,
+    required this.meditation,
+  });
+  
   
   @override
   Widget build(BuildContext context) {
@@ -23,7 +28,7 @@ class meditationCard extends StatelessWidget {
                           child: Column(
                             children: [
                               Icon(Icons.music_note_rounded, color: Colors.orange[300], size: 100),
-                              Text('Orange'),
+                              Text(meditation),
                               Text('1 left', style: TextStyle(color: Colors.grey[400], fontSize: 10)),
                             ]
 

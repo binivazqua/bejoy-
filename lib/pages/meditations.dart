@@ -38,12 +38,10 @@ class StarPage extends StatelessWidget {
                 spacing: 20.0,
                 runSpacing: 20.0 ,
                 children: [
-                  meditationCard(),
-                  meditationCard(),
-                  meditationCard(),
-                  meditationCard(),
-                
- 
+                  meditationCard(meditation: 'Orange'),
+                  meditationCard(meditation: 'Purple'),
+                  meditationCard(meditation: 'Blue',),
+                  meditationCard(meditation: 'Green',),
                 ]
 
               ),
