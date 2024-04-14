@@ -3,7 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterin/pages/chat.dart';
 import 'package:flutterin/pages/home.dart';
-import 'package:flutterin/pages/star.dart';
+import 'package:flutterin/pages/meditations.dart';
 import 'package:flutterin/pages/user.dart';
 
 class navHomePage extends StatefulWidget {
