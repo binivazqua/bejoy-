@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 
 class meditationCard extends StatelessWidget {
   final String meditation;
+  final Color color;
   
   const meditationCard({
     super.key,
     required this.meditation,
+    required this.color
+
   });
   
   
