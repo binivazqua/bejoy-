@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 class meditationCard extends StatelessWidget {
   final String meditation;
   final Color color;
+  final IconData icon;
   
   const meditationCard({
     super.key,
     required this.meditation,
-    required this.color
+    required this.color,
+    required this.icon,
+
 
   });
   
@@ -30,7 +33,7 @@ class meditationCard extends StatelessWidget {
                           padding: EdgeInsets.all(8.0),
                           child: Column(
                             children: [
-                              Icon(Icons.music_note_rounded, color: Colors.orange[300], size: 100),
+                              Icon(icon, color: color, size: 100),
                               Text(meditation),
                               Text('1 left', style: TextStyle(color: Colors.grey[400], fontSize: 10)),
                             ]
