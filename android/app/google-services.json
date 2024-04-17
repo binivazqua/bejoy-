@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "27134652194",
+    "project_id": "bejoy-57486",
+    "storage_bucket": "bejoy-57486.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27134652194:android:23bb2708c9250e4056bf7b",
+        "android_client_info": {
+          "package_name": "com.example.flutterin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhhp3DwgXo5rfpTUVC9k-l32HQg8m_ytY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

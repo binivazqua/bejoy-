@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/components/logoTile.dart';
+import 'package:flutterin/components/myButton.dart';
 import 'package:flutterin/components/textField.dart';
 
 class loginPage extends StatelessWidget {
@@ -8,13 +9,15 @@ class loginPage extends StatelessWidget {
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  void signUserIn() {}
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Center(
         child: Scaffold(
           backgroundColor: Colors.white,
-          body: 
+          body:  
               Column( // in Scaffold 'child' changes to 'body'.
                 // ALIGN ITEMS -> CSS
                         
@@ -62,6 +65,9 @@ class loginPage extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                myButton(),
+                /*
                 ElevatedButton(
                   onPressed: ()
                 {
@@ -86,6 +92,8 @@ class loginPage extends StatelessWidget {
                  ),
                  ),
                  ),
+
+                 */
                  const Text('or ontinue with',
                     style: TextStyle(
                       fontSize: 12,

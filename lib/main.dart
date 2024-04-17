@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/loginPage.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
   // Change the background color:
   //runApp(Container(color:Colors.lightGreen));
 
@@ -10,7 +12,10 @@ void main() {
   - We always start with MaterialApp() widgtes.
   - MaterialApp() requires Material() widgets.
   */ 
-
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
   
 }
