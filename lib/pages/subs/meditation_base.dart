@@ -10,10 +10,27 @@ class meditationTemplate extends StatelessWidget {
       body: Center(
         child: AvatarGlow(
           glowShape: BoxShape.circle,
-          child: Icon(Icons.healing),
+          glowColor: Colors.pink,
+          duration: Duration(milliseconds: 10000),
+          
+          curve: Curves.easeInCirc,
+          glowCount: 3,
+          child: Material(
+            animationDuration: Duration(milliseconds: 100),
+            elevation: 2.0,
+            shape: const CircleBorder(),
+            child: CircleAvatar(
+              backgroundColor: Colors.purple,
+              radius: 40,
+              child: Text('Breath', style: TextStyle(
+                fontSize: 10,
+                color: Colors.white
+              ),)
+            )
+          ),
           
           ),
-      )
-    );
+
+    ));
   }
 }
