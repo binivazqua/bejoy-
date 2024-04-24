@@ -1,7 +1,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ProfilePage extends StatelessWidget {
 
@@ -83,9 +85,7 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Text('username 🤠', style: TextStyle(
-                            fontWeight: FontWeight.w200
-                        ),
+                        Text('username 🤠', style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 15,

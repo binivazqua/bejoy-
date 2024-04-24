@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/loginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutterin/pages/subs/meditation_base.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // Use Scaffold Widget instead of Material:
-      home: loginPage(),
+      //home: loginPage(),
+      home: meditationTemplate(),
       /*
       routes: {
         '/' : (context) => loginPage(),

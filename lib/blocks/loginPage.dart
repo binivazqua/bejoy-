@@ -66,8 +66,8 @@ class loginPage extends StatelessWidget {
                   ),
                 ),
 
-                myButton(),
-                /*
+                //myButton(),
+                
                 ElevatedButton(
                   onPressed: ()
                 {
@@ -93,7 +93,7 @@ class loginPage extends StatelessWidget {
                  ),
                  ),
 
-                 */
+                 
                  const Text('or ontinue with',
                     style: TextStyle(
                       fontSize: 12,
