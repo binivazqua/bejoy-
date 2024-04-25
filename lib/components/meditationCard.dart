@@ -7,7 +7,7 @@ class meditationCard extends StatelessWidget {
   final String meditation;
   final Color color;
   final IconData icon;
-  final int millis;
+
   
   const meditationCard({
     super.key,
@@ -15,8 +15,7 @@ class meditationCard extends StatelessWidget {
     required this.color,
     required this.icon, 
     required this.route, 
-    required this.millis,
-
+   
 
   });
   
