@@ -5,7 +5,7 @@ class animationMedia extends StatelessWidget {
   final bool animated;
   final Color colorcin;
   final Color colorglow;
-  final int time;
+  final int? time;
   final int dur;
   const animationMedia({
     super.key, 

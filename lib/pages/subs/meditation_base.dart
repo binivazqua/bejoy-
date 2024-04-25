@@ -10,6 +10,7 @@ class meditationTemplate extends StatelessWidget {
   final String title;
   final Color color;
   final int millis;
+
   const meditationTemplate({super.key, required this.title, required this.color, required this.millis});
 
 

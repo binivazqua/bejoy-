@@ -30,7 +30,7 @@ class _navHomePage extends State<navHomePage>{
     const UserHome(),
     const StarPage(),
     const ProfilePage(),
-    const ChatPage(),
+    const journalPage(),
   ];
   @override
   Widget build(Object context) {

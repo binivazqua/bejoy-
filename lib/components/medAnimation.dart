@@ -12,7 +12,8 @@ class medAnimation extends StatefulWidget {
   final String title;
   final Color color;
   final int millis;
-  const medAnimation({super.key, required this.title, required this.color, required this.millis});
+ 
+ medAnimation({super.key, required this.title, required this.color, required this.millis, });
 
   @override
   State<medAnimation> createState() => _medAnimationState();
@@ -21,7 +22,7 @@ class medAnimation extends StatefulWidget {
 class _medAnimationState extends State<medAnimation> {
 
   // vars:
-  int timeLeft = 5;
+  int timeLeft = 10;
   bool anim = false;
   String guide = "Breath deeply.";
 
@@ -30,12 +31,12 @@ class _medAnimationState extends State<medAnimation> {
 
       if(timeLeft > 0) {
         setState(() {
-          timeLeft--;  
+          timeLeft --;  
           anim = true;
           guide = "Here we go.";
         });
 
-        if (timeLeft <= (timeLeft % 2 + 1)) {
+        if (timeLeft <= 5) {
         setState(() {
             guide = "You're doing amazing!";
         });
@@ -66,7 +67,7 @@ class _medAnimationState extends State<medAnimation> {
             ),          
             
             // ANGER RELIEF:
-            animationMedia(animated: anim, colorcin: widget.color, time: timeLeft, colorglow: Colors.blue, dur: widget.millis),
+            animationMedia(animated: anim, colorcin: widget.color, time:timeLeft, colorglow: Colors.blue, dur: widget.millis),
 
               Padding(
                 padding: const EdgeInsets.only(top: 50),
@@ -81,7 +82,7 @@ class _medAnimationState extends State<medAnimation> {
                     backgroundColor: MaterialStatePropertyAll(Colors.grey[200])
                   ),
                   onPressed: _startCountdown,
-                 child: Text('Start', style: TextStyle(fontSize: 10))),
+                 child: Text('Start', style: TextStyle(fontSize: 10, color: widget.color))),
               )
 
               /*
