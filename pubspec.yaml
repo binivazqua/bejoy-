@@ -39,7 +39,7 @@ dependencies:
   firebase_core: ^2.30.0
   google_fonts: ^6.2.1
   avatar_glow: ^3.0.1
-  audioplayers: ^6.0.0
+
   
   
 
@@ -75,7 +75,7 @@ flutter:
      - lib/images/google.png
      - lib/images/apple.png
      - lib/images/
-     - lib/audio
+     - lib/audio/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
