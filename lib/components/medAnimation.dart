@@ -9,7 +9,9 @@ import 'package:flutterin/blocks/subblocks/animationMed.dart';
 
 
 class medAnimation extends StatefulWidget {
-  const medAnimation({super.key});
+  final String title;
+  final Color color;
+  const medAnimation({super.key, required this.title, required this.color});
 
   @override
   State<medAnimation> createState() => _medAnimationState();
@@ -74,8 +76,8 @@ bool _animate (){
 
             Padding(
               padding: const EdgeInsets.only(bottom: 50),
-              child: Text('Pain Relief', style: TextStyle(fontSize: 20),),
-            ),          animationMedia(animated: anim, colorcin: Colors.greenAccent, time: timeLeft, colorglow: Colors.blue, dur: 2000),
+              child: Text(widget.title, style: TextStyle(fontSize: 20),),
+            ),          animationMedia(animated: anim, colorcin: widget.color, time: timeLeft, colorglow: Colors.blue, dur: 2000),
 
               Padding(
                 padding: const EdgeInsets.only(top: 50),

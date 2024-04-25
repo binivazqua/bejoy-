@@ -32,12 +32,15 @@ class MyApp extends StatelessWidget {
       // Use Scaffold Widget instead of Material:
       home: loginPage(),
       //home: meditationTemplate(),
-      /*
+      
       routes: {
-        '/' : (context) => loginPage(),
-        '/home' : (context) => const homePage(),
+       // '/' : (context) => loginPage(),
+        '/painRelief' : (context) => const meditationTemplate(title: "Pain Relief", color: Colors.greenAccent,),
+        '/energyBoost' : (context) => const meditationTemplate(title: "Energy Boost", color: Color.fromARGB(255, 240, 235, 105),),
+        '/focusWave' : (context) => const meditationTemplate(title: "Focus Wave", color: Color.fromARGB(255, 105, 112, 240),),
+        '/sos' : (context) => const meditationTemplate(title: "SOS", color: Color.fromARGB(255, 240, 105, 105),),
       },
-      */
+      
     );
   }
 

@@ -38,10 +38,10 @@ class StarPage extends StatelessWidget {
                 spacing: 20.0,
                 runSpacing: 20.0,
                 children: [
-                  myMeditationCard('Anger Relief', Colors.redAccent, Icons.emoji_people_rounded),
-                  myMeditationCard('Energy Boost', Colors.yellow, Icons.add_reaction_rounded),
-                  myMeditationCard('Focus wave', Colors.deepPurpleAccent, Icons.abc_rounded),
-                  myMeditationCard('SOS', Colors.red ,Icons.emoji_flags_rounded),
+                  myMeditationCard('Anger Relief', Colors.redAccent, Icons.emoji_people_rounded, "painRelief"),
+                  myMeditationCard('Energy Boost', Colors.yellow, Icons.add_reaction_rounded, "energyBoost"),
+                  myMeditationCard('Focus wave', Colors.deepPurpleAccent, Icons.abc_rounded, "focusWave"),
+                  myMeditationCard('SOS', Colors.red ,Icons.emoji_flags_rounded, "sos"),
                 ]
 
               ),
@@ -56,6 +56,6 @@ class StarPage extends StatelessWidget {
   
 }
 
-Widget myMeditationCard(String m, Color c, IconData i) {
-  return meditationCard(meditation: m, color: c, icon: i,);
+Widget myMeditationCard(String m, Color c, IconData i, String route) {
+  return meditationCard(meditation: m, color: c, icon: i, route: route,);
 }

@@ -7,15 +7,18 @@ import 'package:flutterin/components/medAnimation.dart';
 
 
 class meditationTemplate extends StatelessWidget {
-  const meditationTemplate({super.key});
+  final String title;
+  final Color color;
+  const meditationTemplate({super.key, required this.title, required this.color});
 
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor:  Color.fromARGB(0, 105, 240, 175)),
       body: Center(
-        child: medAnimation()
+        child: medAnimation(title: title, color: color,)
     )
     );
   }

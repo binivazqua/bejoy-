@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/components/medAnimation.dart';
+import 'package:flutterin/pages/subs/meditation_base.dart';
 
 class meditationCard extends StatelessWidget {
+  final String route;
   final String meditation;
   final Color color;
   final IconData icon;
@@ -10,7 +12,7 @@ class meditationCard extends StatelessWidget {
     super.key,
     required this.meditation,
     required this.color,
-    required this.icon,
+    required this.icon, required this.route,
 
 
   });
@@ -21,7 +23,7 @@ class meditationCard extends StatelessWidget {
     // TODO: implement build
     return SizedBox(
                     width: 160.0,
-                    height: 200.0,
+                    //height: 200.0,
                     child: Card(
                       color: Colors.white,
                       elevation: 1.0,
@@ -33,17 +35,18 @@ class meditationCard extends StatelessWidget {
                         child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Column(
-                            children: [
+                            children: [ 
                               Icon(icon, color: color, size: 100),
                               Text(meditation),
                               Text('1 left', style: TextStyle(color: Colors.grey[400], fontSize: 10)),
 
                               TextButton(
                                 onPressed: () {
-                                  Navigator.push(context, 
+                                  Navigator.restorablePushNamed(context, "/$route");
+                                  /*Navigator.pushReplacement(context, 
                                   MaterialPageRoute(
-                                    builder: (context) => medAnimation())
-                                  );
+                                    builder: (context) => meditationTemplate())
+                                  );*/
                                 },
                                 child: Text("Start"), 
                                 style: ButtonStyle(
