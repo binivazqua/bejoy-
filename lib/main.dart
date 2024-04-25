@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       // Use Scaffold Widget instead of Material:
-      //home: loginPage(),
-      home: meditationTemplate(),
+      home: loginPage(),
+      //home: meditationTemplate(),
       /*
       routes: {
         '/' : (context) => loginPage(),

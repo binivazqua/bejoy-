@@ -6,12 +6,14 @@ class animationMedia extends StatelessWidget {
   final Color colorcin;
   final Color colorglow;
   final int time;
+  final int dur;
   const animationMedia({
     super.key, 
     required this.animated,
     required this.colorcin,
     required this.time,
     required this.colorglow,
+    required this.dur,
 
     
   });
@@ -21,7 +23,7 @@ class animationMedia extends StatelessWidget {
     return AvatarGlow(
               glowShape: BoxShape.circle,
               glowColor: colorglow,
-              duration: Duration(milliseconds: 4000),
+              duration: Duration(milliseconds: dur),
               animate: animated,
               curve: Curves.easeInCirc,
               glowCount: 3,

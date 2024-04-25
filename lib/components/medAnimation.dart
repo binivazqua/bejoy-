@@ -3,6 +3,7 @@ import 'dart:ffi';
 
 
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/subblocks/animationMed.dart';
 
@@ -19,18 +20,32 @@ class _medAnimationState extends State<medAnimation> {
   // vars:
   int timeLeft = 5;
   bool anim = false;
+  String guide = "Breath deeply.";
 
   void _startCountdown() {
-    Timer.periodic(Duration(seconds: 3), (timer) { 
+    Timer.periodic(Duration(seconds: 2), (timer) { 
+
       if(timeLeft > 0) {
         setState(() {
           timeLeft--;  
+          anim = true;
+          guide = "Here we go.";
         });
-        //anim = true;
-      } else {
-        timer.cancel();
-        //a = false;
+
+        if (timeLeft <= (timeLeft % 2 + 1)) {
+        setState(() {
+            guide = "You're doing amazing!";
+        });
       }
+      } else {
+        setState(() {
+          anim = false;
+          guide = "End of exercise.";
+        });
+
+          timer.cancel();
+        
+        }
     });
   }
 
@@ -56,32 +71,15 @@ bool _animate (){
     return Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            //animationMedia(animated: anim, colorcin: Colors.greenAccent, time: timeLeft, colorglow: Colors.blue),
-            AvatarGlow(
-              glowShape: BoxShape.circle,
-              glowColor: Colors.pink,
-              duration: Duration(milliseconds: 4000),
-              animate: true,
-              curve: Curves.easeInCirc,
-              glowCount: 3,
-              child: Material(
-                elevation: 2.0,
-                shape: const CircleBorder(),
-                child: CircleAvatar(
-                  backgroundColor: Colors.purple,
-                  radius: 40,
-                  child: Text(timeLeft.toString(), style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white
-                  ),)
-                )
-              ),
-              
-   ),
+
+            Padding(
+              padding: const EdgeInsets.only(bottom: 50),
+              child: Text('Pain Relief', style: TextStyle(fontSize: 20),),
+            ),          animationMedia(animated: anim, colorcin: Colors.greenAccent, time: timeLeft, colorglow: Colors.blue, dur: 2000),
 
               Padding(
                 padding: const EdgeInsets.only(top: 50),
-                child: Text('Pain relief'),
+                child: Text(guide),
 
               ),
 
