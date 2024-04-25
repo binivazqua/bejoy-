@@ -7,12 +7,15 @@ class meditationCard extends StatelessWidget {
   final String meditation;
   final Color color;
   final IconData icon;
+  final int millis;
   
   const meditationCard({
     super.key,
     required this.meditation,
     required this.color,
-    required this.icon, required this.route,
+    required this.icon, 
+    required this.route, 
+    required this.millis,
 
 
   });
@@ -43,18 +46,12 @@ class meditationCard extends StatelessWidget {
                               TextButton(
                                 onPressed: () {
                                   Navigator.restorablePushNamed(context, "/$route");
-                                  /*Navigator.pushReplacement(context, 
-                                  MaterialPageRoute(
-                                    builder: (context) => meditationTemplate())
-                                  );*/
                                 },
-                                child: Text("Start"), 
-                                style: ButtonStyle(
-                                  backgroundColor: MaterialStatePropertyAll(Colors.black),
+                                child: Text("Start", style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+                               
                                 ),
-                                ),
+                              )
                             ]
-
                           ),
                         ),
                       ),

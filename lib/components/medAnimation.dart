@@ -11,7 +11,8 @@ import 'package:flutterin/blocks/subblocks/animationMed.dart';
 class medAnimation extends StatefulWidget {
   final String title;
   final Color color;
-  const medAnimation({super.key, required this.title, required this.color});
+  final int millis;
+  const medAnimation({super.key, required this.title, required this.color, required this.millis});
 
   @override
   State<medAnimation> createState() => _medAnimationState();
@@ -51,23 +52,7 @@ class _medAnimationState extends State<medAnimation> {
     });
   }
 
-/*
-bool _animate (){
-  if (timeLeft > 0){
-    return true;
-  } else {
-    return false;
-  }
 
-}
-*/
-  // audio player:
-
-  /*
-  void _playSound(){
-  String audioPath = "audio/ding.wav";
-} 
-  */
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -77,7 +62,11 @@ bool _animate (){
             Padding(
               padding: const EdgeInsets.only(bottom: 50),
               child: Text(widget.title, style: TextStyle(fontSize: 20),),
-            ),          animationMedia(animated: anim, colorcin: widget.color, time: timeLeft, colorglow: Colors.blue, dur: 2000),
+
+            ),          
+            
+            // ANGER RELIEF:
+            animationMedia(animated: anim, colorcin: widget.color, time: timeLeft, colorglow: Colors.blue, dur: widget.millis),
 
               Padding(
                 padding: const EdgeInsets.only(top: 50),

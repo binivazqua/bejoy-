@@ -9,7 +9,8 @@ import 'package:flutterin/components/medAnimation.dart';
 class meditationTemplate extends StatelessWidget {
   final String title;
   final Color color;
-  const meditationTemplate({super.key, required this.title, required this.color});
+  final int millis;
+  const meditationTemplate({super.key, required this.title, required this.color, required this.millis});
 
 
 
@@ -18,7 +19,7 @@ class meditationTemplate extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(backgroundColor:  Color.fromARGB(0, 105, 240, 175)),
       body: Center(
-        child: medAnimation(title: title, color: color,)
+        child: medAnimation(title: title, color: color, millis: millis),
     )
     );
   }
