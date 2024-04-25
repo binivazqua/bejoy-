@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,14 @@ class _medAnimationState extends State<medAnimation> {
       }
     });
   }
+
+  // audio player:
+  final player = AudioPlayer();
+
+  void _playSound(){
+  String audioPath = "";
+} 
+  
   @override
   Widget build(BuildContext context) {
     return Column(
