@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/loginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutterin/blocks/navHomePage.dart';
+import 'package:flutterin/models/meditationConstants.dart';
+import 'package:flutterin/pages/home.dart';
 import 'package:flutterin/pages/subs/meditation_base.dart';
 import 'firebase_options.dart';
 
@@ -23,6 +26,7 @@ Future<void> main() async {
 
 
 class MyApp extends StatelessWidget {
+  
   const MyApp({super.key});
 
   @override
@@ -34,11 +38,12 @@ class MyApp extends StatelessWidget {
       //home: meditationTemplate(),
       
       routes: {
-       // '/' : (context) => loginPage(),
-        '/painRelief' : (context) => const meditationTemplate(title: "Anger Relief", color: Colors.orangeAccent, millis: 1000,),
-        '/energyBoost' : (context) => const meditationTemplate(title: "Energy Boost", color: Color.fromARGB(255, 240, 235, 105), millis: 3000, ),
-        '/focusWave' : (context) => const meditationTemplate(title: "Focus Wave", color: Color.fromARGB(255, 105, 112, 240), millis: 1000, ),
-        '/sos' : (context) => const meditationTemplate(title: "SOS", color: Color.fromARGB(255, 240, 105, 105), millis: 500, ),
+        '/home' : (context) => navHomePage(),
+
+        '/painRelief' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.blueAccent, timer: 10, hints: ["uno", "dos", "tres"], waveColor: Colors.indigo, duration: 2000, title: "Anger Relief",)), //meditationTemplate(title: "Anger Relief", color: Colors.orangeAccent, millis: 1000,),
+        '/energyBoost' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.pink, timer: 5, hints: ["cuatro", "cinco", "seis"], waveColor: Colors.yellowAccent, duration: 3000, title: "Energy Boost", )),//meditationTemplate(title: "Energy Boost", color: Color.fromARGB(255, 240, 235, 105), millis: 3000, ),
+        '/focusWave' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.purpleAccent, timer: 15, hints: ["siete", "ocho", "nueve"], waveColor: Colors.deepPurple, duration: 4000, title: "Focus Wave", )),//meditationTemplate(title: "Focus Wave", color: Color.fromARGB(255, 105, 112, 240), millis: 1000, ),
+        '/sos' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.pink, timer: 20, hints: ["diez", "once", "doce"], waveColor: Colors.pinkAccent, duration: 4500, title: "SOS", )), //meditationTemplate(title: "SOS", color: Color.fromARGB(255, 240, 105, 105), millis: 500, ),
       },
       
     );
