@@ -40,14 +40,14 @@ class MyApp extends StatelessWidget {
         '/home': (context) => navHomePage(),
         '/painRelief': (context) => meditationTemplate(
                 constants: new meditationConstants(
-              color: Colors.blueAccent,
+              color: Colors.indigo,
               timer: 10,
               hints: [
                 "Think of three reasons of why you may be angry.",
                 "Tension all your limbs. And let go...",
                 "Exercise Done."
               ],
-              waveColor: Colors.indigo,
+              waveColor: Colors.blueAccent,
               duration: 2000,
               title: "Anger Relief",
             )), //meditationTemplate(title: "Anger Relief", color: Colors.orangeAccent, millis: 1000,),

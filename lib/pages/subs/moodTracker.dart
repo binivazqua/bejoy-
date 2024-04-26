@@ -16,9 +16,8 @@ class _moodTrackerState extends State<moodTracker> {
 
   // save users track:
   String userPost = ' ';
-  String r1 = '';
-  String r2 = '';
-  String r3 = '';
+  String userPost2 = ' ';
+  String emotion = '';
 
   @override
   Widget build(BuildContext context) {
@@ -123,9 +122,11 @@ class _moodTrackerState extends State<moodTracker> {
             // display text:
             Container(
                 child: Container(
+                    padding: EdgeInsets.all(20),
                     child: Center(
-              child: Text(userPost),
-            ))),
+                        child: Column(
+                      children: [Text(userPost), Text(userPost2)],
+                    )))),
           ],
         ),
       ),
@@ -133,18 +134,26 @@ class _moodTrackerState extends State<moodTracker> {
   }
 
   void _textControlVerif1() {
-    if (_textController1.text == 'bien' ||
+    String emotion = _textController3.text.toString();
+
+    if ((_textController1.text == 'bien' ||
         _textController1.text == 'feliz' ||
-        _textController1.text == 'alegre') {
+        _textController1.text == 'alegre')) {
       setState(() {
         userPost = "Estás de buen humor.";
       });
     } else if (_textController1.text == 'mal' ||
         _textController1.text == 'triste' ||
-        _textController1.text == 'enojado') {
+        _textController1.text == 'enojado' ||
+        (_textController2.text == "no sé" ||
+            _textController2.text == "en nada")) {
       setState(() {
         userPost = "Necesitamos trabajar en tus sentimientos.";
       });
     }
+
+    setState(() {
+      userPost2 = 'Juntos podemos lograr que te sientas $emotion.';
+    });
   }
 }

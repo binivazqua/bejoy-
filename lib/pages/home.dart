@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
 import 'package:flutterin/pages/subs/moodTracker.dart';
+import 'package:flutterin/pages/user.dart';
 
 class UserHome extends StatefulWidget {
   const UserHome({super.key});
@@ -42,10 +43,14 @@ class _UserHomeState extends State<UserHome> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.pink[100],
                     ),
-                    child: Icon(
-                      Icons.person,
-                      color: Colors.pink[300],
-                    )),
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProfilePage()));
+                        },
+                        icon: Icon(Icons.person))),
               ],
             ),
 
@@ -153,10 +158,22 @@ class _UserHomeState extends State<UserHome> {
                 child: ListView(
               scrollDirection: Axis.vertical,
               children: [
-                drProfileCard(),
-                drProfileCard(),
-                drProfileCard(),
-                drProfileCard(),
+                drProfileCard(
+                  drname: 'Dra. Ana Zarza',
+                  score: '5',
+                ),
+                drProfileCard(
+                  drname: 'Dra. Karen Díaz',
+                  score: '4',
+                ),
+                drProfileCard(
+                  drname: 'Dr. Victor Salas',
+                  score: '3',
+                ),
+                drProfileCard(
+                  drname: 'Dr. Héctor Soto',
+                  score: '4',
+                ),
               ],
             )),
           ]),
