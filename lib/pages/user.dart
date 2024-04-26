@@ -58,6 +58,7 @@ class ProfilePage extends StatelessWidget {
                   children: [ 
                     const CircleAvatar(
                     radius: 50,
+                    child: Icon(Icons.person, size: 60, color: Colors.purple),
                     
                     ),
                     InkWell(
@@ -78,14 +79,14 @@ class ProfilePage extends StatelessWidget {
 
                 const Padding(
                   padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
-                  child: Text('Username Profile', style: TextStyle(fontWeight: FontWeight.w600),),
+                  child: Text('Biniza Vazquez', style: TextStyle(fontWeight: FontWeight.w600),),
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
                       children: [
-                        Text('username 🤠', style: TextStyle(fontWeight: FontWeight.bold),
+                        Text('bini 🤠', style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 15,
@@ -112,15 +113,15 @@ class ProfilePage extends StatelessWidget {
 
                 physics: ScrollPhysics() ,
                 children: [
-                  myBox('Award 1', Icons.star_outline_rounded, Colors.yellow),
-                  myBox('Award 2', Icons.star_outline_rounded, Colors.pink),
-                  myBox('Award 3', Icons.star_outline_rounded, Colors.purple),
-                  myBox('Award 4', Icons.star_outline_rounded, Colors.blue),
-                  myBox('Award 5', Icons.star_outline_rounded, Colors.orange),
-                  myBox('Award 6', Icons.star_outline_rounded, Colors.yellow),
-                  myBox('Award', Icons.star_outline_rounded, Colors.pink),
-                  myBox('Award', Icons.star_outline_rounded, Colors.purple),
-                  myBox('Award', Icons.star_outline_rounded, Colors.yellow),
+                  myBox('Responsibility', Icons.star_outline_rounded, Colors.yellow),
+                  myBox('Respect', Icons.accessibility_new_outlined, Colors.pink),
+                  myBox('Awareness', Icons.access_alarm_rounded, Colors.purple),
+                  myBox('Love', Icons.favorite_border_rounded, Colors.blue),
+                  myBox('Confidence', Icons.add_reaction_rounded, Colors.orange),
+                  myBox('Altruism', Icons.handshake_outlined, Colors.blueAccent),
+                  myBox('Honesty', Icons.messenger_outline_sharp, Colors.pink),
+                  myBox('Humble', Icons.hail_sharp, Colors.purple),
+                  myBox('Calmness', Icons.waves_rounded, Colors.pink),
 
 
                   
@@ -175,8 +176,8 @@ Widget myBox (String thing, IconData icon, Color color) {
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 10),
-                child: Text(thing,
-                style: TextStyle()),
+                child: Text(thing, softWrap: true,
+                style: TextStyle(fontSize: 10)),
               ),
           ],
         ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
+import 'package:flutterin/pages/subs/moodTracker.dart';
 
 class UserHome extends StatelessWidget {
   const UserHome({super.key});
@@ -28,7 +29,7 @@ class UserHome extends StatelessWidget {
                   children: [
                     Text('Hey!', style: TextStyle(fontWeight: FontWeight.bold),),
                     
-                    Text('Username', style: TextStyle(fontSize: 20)),
+                    Text('Biniza Vazquez', style: TextStyle(fontSize: 20)),
 
                   ],
                 ),
@@ -57,6 +58,7 @@ class UserHome extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
+                      child: Icon(Icons.question_mark_rounded, color: Colors.deepPurple, size: 80),
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
@@ -74,18 +76,12 @@ class UserHome extends StatelessWidget {
                            Text('Track your mood now.'),
                            
                            SizedBox(height: 10),
-                              Container(
-                                alignment: Alignment.center,
-                                padding: EdgeInsets.all(3),
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Colors.grey,
-                                ),
-                                child: Center(
-                                  child: Text('Go!')
-                                  ),
-                            )
+
+                              ElevatedButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => moodTracker()));
+                              }, 
+                              child: Text('Go!'),)
+                            
                         ]
                       ),
                     ),

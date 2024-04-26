@@ -5,6 +5,7 @@ import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/models/meditationConstants.dart';
 import 'package:flutterin/pages/home.dart';
 import 'package:flutterin/pages/subs/meditation_base.dart';
+import 'package:flutterin/pages/subs/moodTracker.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
       // Use Scaffold Widget instead of Material:
       home: loginPage(),
       //home: meditationTemplate(),
+      //home: moodTracker(),
       
       routes: {
         '/home' : (context) => navHomePage(),
