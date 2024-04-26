@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class utilContainer extends StatelessWidget {
-  final IconData icon;
   final String text;
+  final Color color;
 
   utilContainer({
     required this.text,
-    required this.icon,
+    required this.color,
   });
 
   @override
@@ -14,23 +14,25 @@ class utilContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 25.0),
       child: Container(
-              padding: EdgeInsets.all(12) ,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.pink[50]
-              ),
-              child: Row(
-              children: [
-                Icon(icon, color: Colors.pink[100],),
-                SizedBox(width: 20),
-                Text(text, style: TextStyle(
-                  color: Colors.grey[800]
-                ),),
-              ],
+        padding: EdgeInsets.all(12),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10), color: color),
+        child: Row(
+          children: [
+            Icon(
+              Icons.abc_rounded,
+              size: 50,
+              color: Colors.white,
             ),
+            SizedBox(width: 20),
+            Text(
+              text,
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
-                
-    
   }
 }
