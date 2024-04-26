@@ -24,11 +24,16 @@ PODS:
     - Flutter
     - FlutterMacOS
   - PromisesObjC (2.4.0)
+  - speech_to_text (0.0.1):
+    - Flutter
+    - Try
+  - Try (2.1.1)
 
 DEPENDENCIES:
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
+  - speech_to_text (from `.symlinks/plugins/speech_to_text/ios`)
 
 SPEC REPOS:
   trunk:
@@ -37,6 +42,7 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - GoogleUtilities
     - PromisesObjC
+    - Try
 
 EXTERNAL SOURCES:
   firebase_core:
@@ -45,6 +51,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
+  speech_to_text:
+    :path: ".symlinks/plugins/speech_to_text/ios"
 
 SPEC CHECKSUMS:
   Firebase: 91fefd38712feb9186ea8996af6cbdef41473442
@@ -55,6 +63,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  speech_to_text: b43a7d99aef037bd758ed8e45d79bbac035d2dfe
+  Try: 5ef669ae832617b3cee58cb2c6f99fb767a4ff96
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
 

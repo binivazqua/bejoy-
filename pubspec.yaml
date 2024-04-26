@@ -39,6 +39,8 @@ dependencies:
   firebase_core: ^2.30.0
   google_fonts: ^6.2.1
   avatar_glow: ^3.0.1
+  speech_to_text: ^6.6.1
+  highlight_text: ^1.7.0
 
   
   

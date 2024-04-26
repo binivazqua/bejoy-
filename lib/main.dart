@@ -39,7 +39,6 @@ class MyApp extends StatelessWidget {
       
       routes: {
         '/home' : (context) => navHomePage(),
-
         '/painRelief' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.blueAccent, timer: 10, hints: ["uno", "dos", "tres"], waveColor: Colors.indigo, duration: 2000, title: "Anger Relief",)), //meditationTemplate(title: "Anger Relief", color: Colors.orangeAccent, millis: 1000,),
         '/energyBoost' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.pink, timer: 5, hints: ["cuatro", "cinco", "seis"], waveColor: Colors.yellowAccent, duration: 3000, title: "Energy Boost", )),//meditationTemplate(title: "Energy Boost", color: Color.fromARGB(255, 240, 235, 105), millis: 3000, ),
         '/focusWave' : (context) => meditationTemplate(constants: new meditationConstants(color: Colors.purpleAccent, timer: 15, hints: ["siete", "ocho", "nueve"], waveColor: Colors.deepPurple, duration: 4000, title: "Focus Wave", )),//meditationTemplate(title: "Focus Wave", color: Color.fromARGB(255, 105, 112, 240), millis: 1000, ),
