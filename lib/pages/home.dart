@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutterin/components/drProfile.dart';
@@ -156,6 +157,7 @@ class _UserHomeState extends State<UserHome> {
 
             Expanded(
                 child: ListView(
+              shrinkWrap: true,
               scrollDirection: Axis.vertical,
               children: [
                 drProfileCard(
