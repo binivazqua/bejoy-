@@ -16,8 +16,10 @@ class StarPage extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.only(left: 50, top: 30, bottom: 30),
                 child: Text('My meditation space...',
-                    style:
-                        TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Kosugi'))),
             Padding(
               padding: EdgeInsets.all(12.0),
               child: Center(

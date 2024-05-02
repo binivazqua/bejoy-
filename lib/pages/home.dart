@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
+import 'package:flutterin/models/colorConstants.dart';
 import 'package:flutterin/pages/subs/moodTracker.dart';
 import 'package:flutterin/pages/user.dart';
 
@@ -63,16 +64,16 @@ class _UserHomeState extends State<UserHome> {
             Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                  color: Colors.orange[300],
+                  color: colorConstants.orangito,
                   borderRadius: BorderRadius.circular(15)),
               child: Row(children: [
                 Container(
                   child: Icon(Icons.question_mark_rounded,
-                      color: Colors.deepPurple, size: 80),
+                      color: colorConstants.deepPurple, size: 80),
                   height: 100,
                   width: 100,
                   decoration: BoxDecoration(
-                    color: Colors.purple[300],
+                    color: colorConstants.fuxiaPurple,
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
