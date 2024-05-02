@@ -3,6 +3,7 @@ import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/myButton.dart';
 import 'package:flutterin/components/textField.dart';
+import 'package:flutterin/models/colorConstants.dart';
 
 class loginPage extends StatelessWidget {
   loginPage({super.key});
@@ -24,18 +25,30 @@ class loginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-                padding: const EdgeInsets.all(5.0),
+                padding: const EdgeInsets.all(0),
                 child: Image(
                   image: AssetImage('lib/images/bee.png'),
                   width: 100,
                 )),
+
+            Text(
+              'Bejoy',
+              style: TextStyle(fontFamily: 'Kosugi', fontSize: 40),
+            ),
+
+            SizedBox(
+              height: 20,
+            ),
+
             const Text('Hello again!',
                 style: TextStyle(
                   color: Colors.black,
+                  fontFamily: 'Urbanist',
                 )),
             const Text('Login to Continue',
                 style: TextStyle(
                   color: Colors.black,
+                  fontFamily: 'Urbanist',
                 )),
             textField(
               hintDesiredText: 'Username',
@@ -57,6 +70,7 @@ class loginPage extends StatelessWidget {
                   color: Colors.black,
                   fontSize: 12,
                   fontStyle: FontStyle.italic,
+                  fontFamily: 'Urbanist',
                 ),
               ),
             ),
@@ -73,7 +87,7 @@ class loginPage extends StatelessWidget {
               },
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.resolveWith(
-                      (states) => Colors.yellow[500])),
+                      (states) => colorConstants.yellowish)),
               child: const Text(
                 'Go!',
                 style: TextStyle(
@@ -87,6 +101,7 @@ class loginPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 12,
                 height: 3,
+                fontFamily: 'Urbanist',
               ),
             ),
             const Row(
@@ -103,3 +118,9 @@ class loginPage extends StatelessWidget {
     );
   }
 }
+
+// FIX MATERIAL COLOR:
+/*
+backgroundColor: MaterialStateProperty.resolveWith(
+                      (states) => Colors.yellow[500])),
+*/

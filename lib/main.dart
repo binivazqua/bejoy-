@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Urbanist'),
       // Use Scaffold Widget instead of Material:
       home: loginPage(),
       //home: meditationTemplate(),

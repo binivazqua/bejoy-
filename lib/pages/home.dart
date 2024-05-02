@@ -16,6 +16,7 @@ class UserHome extends StatefulWidget {
 class _UserHomeState extends State<UserHome> {
   final _textController = TextEditingController();
   String myWord = 'New Word';
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -33,9 +34,11 @@ class _UserHomeState extends State<UserHome> {
                   children: [
                     Text(
                       'Hey!',
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontFamily: 'Kosugi'),
                     ),
-                    Text('Biniza Vazquez', style: TextStyle(fontSize: 20)),
+                    Text('Biniza Vazquez',
+                        style: TextStyle(fontSize: 20, fontFamily: 'Kosugi')),
                   ],
                 ),
                 Container(
@@ -79,8 +82,13 @@ class _UserHomeState extends State<UserHome> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('How are you feeling?',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Text('Track your mood now.'),
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Urbanist')),
+                        Text(
+                          'Track your mood now.',
+                          style: TextStyle(fontFamily: 'Urbanist'),
+                        ),
                         SizedBox(height: 10),
                         ElevatedButton(
                           onPressed: () {
