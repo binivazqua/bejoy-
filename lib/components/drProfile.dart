@@ -17,8 +17,8 @@ class drProfileCard extends StatelessWidget {
     // TODO: implement build
     return Container(
       padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          color: Colors.purple[200], borderRadius: BorderRadius.circular(10)),
+      decoration:
+          BoxDecoration(color: color, borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -27,17 +27,16 @@ class drProfileCard extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Icon(Icons.person, size: 40, color: color),
+                child: Icon(Icons.person, size: 40, color: Colors.white),
               ),
               Container(
                 width: 180,
-                transformAlignment: AlignmentDirectional.center,
-                alignment: Alignment.centerRight,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 50),
+                  padding: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
                   child: Text(
                     drname,
                     style: TextStyle(color: Colors.white),
+                    textAlign: TextAlign.left,
                   ),
                 ),
               ),

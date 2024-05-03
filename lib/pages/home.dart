@@ -168,22 +168,30 @@ class _UserHomeState extends State<UserHome> {
                     child: ListView(
               children: [
                 drProfileCard(
-                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                    drname: 'Dr. Francisco Mares',
+                    score: '4',
+                    color: colorConstants.fuxiaPurple),
                 SizedBox(
                   height: 15,
                 ),
                 drProfileCard(
-                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                    drname: 'Dr. Daniel César',
+                    score: '4',
+                    color: colorConstants.lightPeriwinkle),
                 SizedBox(
                   height: 15,
                 ),
                 drProfileCard(
-                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                    drname: 'Dr. Tyler Jones',
+                    score: '4',
+                    color: colorConstants.deepPurple),
                 SizedBox(
                   height: 15,
                 ),
                 drProfileCard(
-                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                    drname: 'Dr. Mac Millan',
+                    score: '4',
+                    color: colorConstants.pinky),
                 SizedBox(
                   height: 15,
                 )

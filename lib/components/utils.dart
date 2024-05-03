@@ -12,7 +12,7 @@ class utilContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25.0),
+      padding: const EdgeInsets.only(left: 10),
       child: Container(
         padding: EdgeInsets.all(12),
         decoration: BoxDecoration(
