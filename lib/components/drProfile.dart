@@ -4,11 +4,13 @@ import 'package:flutter/widgets.dart';
 class drProfileCard extends StatelessWidget {
   final String drname;
   final String score;
+  final Color color;
 
   const drProfileCard({
     Key? key,
     required this.drname,
     required this.score,
+    required this.color,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class drProfileCard extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Icon(Icons.person, size: 40, color: Colors.deepPurple),
+                child: Icon(Icons.person, size: 40, color: color),
               ),
               Container(
                 width: 180,
@@ -35,7 +37,7 @@ class drProfileCard extends StatelessWidget {
                   padding: const EdgeInsets.only(right: 50),
                   child: Text(
                     drname,
-                    style: TextStyle(color: Colors.purple[600]),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),

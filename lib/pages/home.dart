@@ -165,18 +165,30 @@ class _UserHomeState extends State<UserHome> {
 
             Expanded(
                 child: SizedBox(
-              child: ListView.separated(
-                itemBuilder: (context, index) {
-                  return drProfileCard(drname: 'djkce', score: '4');
-                },
-                separatorBuilder: (context, index) {
-                  return SizedBox(
-                    height: 10,
-                  );
-                },
-                itemCount: 4,
-              ),
-            ))
+                    child: ListView(
+              children: [
+                drProfileCard(
+                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                SizedBox(
+                  height: 15,
+                ),
+                drProfileCard(
+                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                SizedBox(
+                  height: 15,
+                ),
+                drProfileCard(
+                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                SizedBox(
+                  height: 15,
+                ),
+                drProfileCard(
+                    drname: 's', score: '4', color: colorConstants.fuxiaPurple),
+                SizedBox(
+                  height: 15,
+                )
+              ],
+            )))
           ]),
         ),
       ),
@@ -217,4 +229,27 @@ Expanded(
                 ],
               ),
             )),
+*/
+
+/*
+
+child: ListView.separated(
+                itemBuilder: (context, index) {
+                  return drProfileCard(
+                      drname: 'djkce',
+                      score: '4',
+                      color: colorConstants.periwinkle), 
+                      drProfileCard(
+                      drname: 'djkce',
+                      score: '4',
+                      color: colorConstants.periwinkle);
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(
+                    height: 10,
+                  );
+                },
+                itemCount: 4,
+              ),
+
 */
