@@ -36,10 +36,13 @@ class _UserHomeState extends State<UserHome> {
                     Text(
                       'Hey!',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, fontFamily: 'Kosugi'),
+                          fontWeight: FontWeight.bold, fontFamily: 'Yomogi'),
                     ),
                     Text('Biniza Vazquez',
-                        style: TextStyle(fontSize: 20, fontFamily: 'Kosugi')),
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontFamily: 'Jua',
+                            fontWeight: FontWeight.w100)),
                   ],
                 ),
                 Container(

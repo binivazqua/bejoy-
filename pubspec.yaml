@@ -97,6 +97,12 @@ flutter:
     - family: Urbanist
       fonts:
         - asset: lib/fonts/Urbanist-VariableFont_wght.ttf
+    - family: Yomogi
+      fonts:
+        - asset: lib/fonts/Yomogi-Regular.ttf
+    - family: Jua
+      fonts:
+        - asset: lib/fonts/Jua-Regular.ttf
         
 
   # For details regarding fonts from package dependencies,

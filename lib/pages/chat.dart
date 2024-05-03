@@ -1,5 +1,6 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterin/models/colorConstants.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 
@@ -10,14 +11,41 @@ class journalPage extends StatefulWidget {
 
 class _journalPageState extends State<journalPage> {
   final Map<String, HighlightedWord> _highlights = {
-    'siento': HighlightedWord(
+    'alegre': HighlightedWord(
       onTap: () => print('siento'),
-      textStyle: TextStyle(
-        color: Colors.blue,
-        fontWeight: FontWeight.bold,
-        fontSize: 32.0,
-      ),
-    )
+      textStyle: colorConstants.positiveWord,
+    ),
+    'feliz': HighlightedWord(
+        onTap: () => print('feliz'), textStyle: colorConstants.positiveWord),
+    'agradecida': HighlightedWord(
+      onTap: () => print('agradecida'),
+      textStyle: colorConstants.positiveWord,
+    ),
+
+    // negativas:
+    'triste': HighlightedWord(
+      onTap: () => print('triste'),
+      textStyle: colorConstants.negativeWord,
+    ),
+    'ansiosa': HighlightedWord(
+        onTap: () => print('ansiosa'), textStyle: colorConstants.negativeWord),
+    'frustrada': HighlightedWord(
+      onTap: () => print('frustrada'),
+      textStyle: colorConstants.negativeWord,
+    ),
+
+    // helpful:
+
+    'calmada': HighlightedWord(
+      onTap: () => print('calmada'),
+      textStyle: colorConstants.helpfulWord,
+    ),
+    'bien': HighlightedWord(
+        onTap: () => print('bien'), textStyle: colorConstants.helpfulWord),
+    'mas o menos': HighlightedWord(
+      onTap: () => print('mas o menos'),
+      textStyle: colorConstants.helpfulWord,
+    ),
   };
   // ignore: unused_field
   //stt.SpeechToText _speech;
@@ -46,36 +74,6 @@ class _journalPageState extends State<journalPage> {
             child: Icon(isListening ? Icons.mic : Icons.mic_none),
           ),
         ),
-
-        /*
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: AvatarGlow(
-        animate: isListening,
-        glowShape: BoxShape.circle,
-        duration: Duration(milliseconds: 2000),
-        glowColor: Colors.pinkAccent,
-        repeat: true,
-        
-        child: GestureDetector(
-          onTapDown:(details) {
-            setState(() {
-              isListening = true;
-            });
-          },
-
-          onTapUp:(details) {
-            setState(() {
-              isListening = false;
-            });
-          }, 
-          child: CircleAvatar(
-            backgroundColor: Colors.pink[200],
-            radius: 35,
-            child: Icon(isListening ? Icons.mic : Icons.mic_none, color: Colors.white)
-          ),
-        ),
-      ),*/
-
         appBar: AppBar(
             title: Text(
                 'Confidence: ${(_confidence * 100.0).toStringAsFixed(1)}%')),
@@ -87,7 +85,7 @@ class _journalPageState extends State<journalPage> {
               text: _text,
               words: _highlights,
               textStyle: TextStyle(
-                fontSize: 32.0,
+                fontSize: 20.0,
                 color: Colors.black,
               ),
             ),

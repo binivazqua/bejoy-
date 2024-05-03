@@ -19,7 +19,7 @@ class StarPage extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Kosugi'))),
+                        fontFamily: 'Jua'))),
             Padding(
               padding: EdgeInsets.all(12.0),
               child: Center(

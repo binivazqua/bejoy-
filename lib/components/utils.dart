@@ -27,8 +27,10 @@ class utilContainer extends StatelessWidget {
             SizedBox(width: 20),
             Text(
               text,
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Jua'),
             ),
           ],
         ),
