@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
 import 'package:flutterin/models/colorConstants.dart';
@@ -146,50 +147,36 @@ class _UserHomeState extends State<UserHome> {
 
             SizedBox(height: 25),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 1.5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Nuestros especialistas',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      )),
-                  Text('Ver todos',
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: Colors.grey[600],
-                      ))
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Nuestros especialistas',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    )),
+                Text('Ver todos',
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.grey[600],
+                    )),
+              ],
             ),
 
-            SizedBox(height: 25),
-
             Expanded(
-                child: ListView(
-              shrinkWrap: true,
-              scrollDirection: Axis.vertical,
-              children: [
-                drProfileCard(
-                  drname: 'Dra. Ana Zarza',
-                  score: '5',
-                ),
-                drProfileCard(
-                  drname: 'Dra. Karen Díaz',
-                  score: '4',
-                ),
-                drProfileCard(
-                  drname: 'Dr. Victor Salas',
-                  score: '3',
-                ),
-                drProfileCard(
-                  drname: 'Dr. Héctor Soto',
-                  score: '4',
-                ),
-              ],
-            )),
+                child: SizedBox(
+              child: ListView.separated(
+                itemBuilder: (context, index) {
+                  return drProfileCard(drname: 'djkce', score: '4');
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(
+                    height: 10,
+                  );
+                },
+                itemCount: 4,
+              ),
+            ))
           ]),
         ),
       ),
@@ -202,3 +189,32 @@ class _UserHomeState extends State<UserHome> {
     });
   }
 }
+
+/*
+Expanded(
+                child: SizedBox(
+              width: 400,
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.vertical,
+                children: [
+                  drProfileCard(
+                    drname: 'Dra. Ana Zarza',
+                    score: '5',
+                  ),
+                  drProfileCard(
+                    drname: 'Dra. Karen Díaz',
+                    score: '4',
+                  ),
+                  drProfileCard(
+                    drname: 'Dr. Victor Salas',
+                    score: '3',
+                  ),
+                  drProfileCard(
+                    drname: 'Dr. Héctor Soto',
+                    score: '4',
+                  ),
+                ],
+              ),
+            )),
+*/
