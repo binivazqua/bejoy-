@@ -39,7 +39,7 @@ class _medAnimationState extends State<medAnimation> {
           timeLeft--;
           anim = true;
           guide = widget.constants.hints[0];
-          ding.play(AssetSource('lib/audio/ding.wav'));
+          ding.play(AssetSource('audio/dingy.wav'));
         });
 
         if (timeLeft <= (widget.constants.timer / 2).ceil()) {

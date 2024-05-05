@@ -1,7 +1,9 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutterin/components/audioPlayer.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -117,6 +119,7 @@ Widget myBox(String thing, IconData icon, Color color) {
               child:
                   Text(thing, softWrap: true, style: TextStyle(fontSize: 10)),
             ),
+            audioPlayer(),
           ],
         ),
       ),

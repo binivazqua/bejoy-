@@ -12,7 +12,7 @@ class journalPage extends StatefulWidget {
 class _journalPageState extends State<journalPage> {
   final Map<String, HighlightedWord> _highlights = {
     'alegre': HighlightedWord(
-      onTap: () => print('siento'),
+      onTap: () => print('alegre'),
       textStyle: colorConstants.positiveWord,
     ),
     'feliz': HighlightedWord(
