@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -113,7 +115,7 @@ class _moodTrackerState extends State<moodTracker> {
               ),
 
               MaterialButton(
-                color: Colors.grey[50],
+                color: const Color.fromARGB(255, 164, 65, 65),
                 focusColor: const Color.fromARGB(255, 163, 62, 62),
                 onPressed: () {
                   _textControlVerif1;
@@ -124,10 +126,15 @@ class _moodTrackerState extends State<moodTracker> {
               // display text:
               Container(
                   child: Container(
+                      color: Colors.amber,
                       padding: EdgeInsets.all(20),
                       child: Center(
                           child: Column(
-                        children: [Text(userPost), Text(userPost2)],
+                        children: [
+                          Text('Holis'),
+                          Text(userPost),
+                          Text(userPost2)
+                        ],
                       )))),
             ],
           ),
@@ -138,6 +145,8 @@ class _moodTrackerState extends State<moodTracker> {
 
   void _textControlVerif1() {
     String emotion = _textController3.text.toString();
+
+    print('BUTTON WORKS');
 
     if ((_textController1.text == 'bien' ||
         _textController1.text == 'feliz' ||
