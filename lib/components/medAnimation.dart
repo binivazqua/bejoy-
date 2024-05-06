@@ -51,6 +51,7 @@ class _medAnimationState extends State<medAnimation> {
         setState(() {
           anim = false;
           guide = widget.constants.hints[2];
+          ding.play(AssetSource('audio/done.mp3'));
         });
 
         timer.cancel();

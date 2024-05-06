@@ -21,7 +21,7 @@ class _audioPlayerState extends State<audioPlayer> {
   }
 
   Future<void> playSound() async {
-    String audioPath = 'audio/ding.wav';
+    String audioPath = 'audio/dingy.wav';
     await player.play(AssetSource(audioPath));
   }
 }

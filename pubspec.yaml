@@ -78,6 +78,8 @@ flutter:
     - lib/images/apple.png
     - lib/images/
     - assets/audio/ding.wav
+    - assets/audio/dingy.wav
+    - assets/audio/done.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
