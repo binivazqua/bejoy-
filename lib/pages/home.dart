@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
 import 'package:flutterin/models/colorConstants.dart';
-import 'package:flutterin/pages/subs/moodTracker.dart';
+import 'package:flutterin/pages/subs/moodQuest.dart';
 import 'package:flutterin/pages/user.dart';
 
 class UserHome extends StatefulWidget {
@@ -100,7 +100,7 @@ class _UserHomeState extends State<UserHome> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => moodTracker()));
+                                    builder: (context) => moodQuest()));
                           },
                           child: Text('Go!'),
                         )
