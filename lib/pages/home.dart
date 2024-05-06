@@ -6,6 +6,7 @@ import 'package:flutterin/components/drProfile.dart';
 import 'package:flutterin/components/utils.dart';
 import 'package:flutterin/models/colorConstants.dart';
 import 'package:flutterin/pages/subs/moodQuest.dart';
+import 'package:flutterin/pages/subs/moodTracker.dart';
 import 'package:flutterin/pages/user.dart';
 
 class UserHome extends StatefulWidget {
@@ -23,10 +24,11 @@ class _UserHomeState extends State<UserHome> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20),
         child: SafeArea(
-          child: Column(children: [
+          child: Column(mainAxisSize: MainAxisSize.max, children: [
             // user app bar
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -103,7 +105,15 @@ class _UserHomeState extends State<UserHome> {
                                     builder: (context) => moodQuest()));
                           },
                           child: Text('Go!'),
-                        )
+                        ),
+                        ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => moodTrackerPage()));
+                            },
+                            child: Text('Tracker')),
                       ]),
                 ),
               ]),
