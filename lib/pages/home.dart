@@ -106,6 +106,7 @@ class _UserHomeState extends State<UserHome> {
                           },
                           child: Text('Go!'),
                         ),
+                        /*
                         ElevatedButton(
                             onPressed: () {
                               Navigator.push(
@@ -113,7 +114,7 @@ class _UserHomeState extends State<UserHome> {
                                   MaterialPageRoute(
                                       builder: (context) => moodTrackerPage()));
                             },
-                            child: Text('Tracker')),
+                            child: Text('Tracker')),*/
                       ]),
                 ),
               ]),

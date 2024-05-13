@@ -59,6 +59,19 @@ class _medAnimationState extends State<medAnimation> {
     });
   }
 
+  void _finishCountdown() {
+    final ding = AudioPlayer();
+    Timer.periodic(Duration(seconds: 2), (timer) {
+      setState(() {
+        anim = false;
+        guide = widget.constants.hints[2];
+        ding.play(AssetSource('audio/done.mp3'));
+      });
+
+      timer.cancel();
+    });
+  }
+
 /*
 _startCountdown (int timeLeft, List hints){
   int counter = timeLeft;
@@ -121,7 +134,9 @@ _startCountdown (int timeLeft, List hints){
               child: Text('Start',
                   style:
                       TextStyle(fontSize: 10, color: widget.constants.color))),
-        )
+        ),
+
+        TextButton(onPressed: _finishCountdown, child: Text('End early')),
 
         /*
               MaterialButton(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterin/blocks/homePage.dart';
+import 'package:flutterin/blocks/navHomePage.dart';
 
 class moodTrackerPage extends StatelessWidget {
   const moodTrackerPage({super.key});
@@ -48,7 +50,7 @@ class _moodSlidesState extends State<moodSlides> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      //appBar: AppBar(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 200),
@@ -134,13 +136,13 @@ class waterTracker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      //appBar: AppBar(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 200),
           child: Column(
             children: [
-              Text('¿Cómo te sientes hoy?'),
+              Text('¿Ya tomaste agua hoy?'),
               SizedBox(height: 5),
               Row(
                 mainAxisSize: MainAxisSize.min,
@@ -218,7 +220,7 @@ class _readynessTrackerState extends State<readynessTracker> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      //appBar: AppBar(),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 200),
@@ -232,22 +234,22 @@ class _readynessTrackerState extends State<readynessTracker> {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.follow_the_signs_rounded),
+                    icon: Icon(Icons.star_rounded),
                     iconSize: 50,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.water_drop_rounded),
+                    icon: Icon(Icons.star_rounded),
                     iconSize: 50,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.water_drop_rounded),
+                    icon: Icon(Icons.star_rounded),
                     iconSize: 50,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.water_drop_rounded),
+                    icon: Icon(Icons.star_rounded),
                     iconSize: 50,
                   ),
                 ],
@@ -271,6 +273,17 @@ class _readynessTrackerState extends State<readynessTracker> {
                       icon: Icon(Icons.arrow_forward_ios_rounded)),
                 ],
               ),
+
+              SizedBox(height: 50),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => navHomePage()));
+                  },
+                  child: Text(
+                    'Estoy lista',
+                    style: TextStyle(color: Colors.grey[800]),
+                  ))
 
               // FOR FURTHER ICON MODIFS:
               /*

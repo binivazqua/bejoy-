@@ -4,6 +4,7 @@ import 'package:flutterin/components/logoTile.dart';
 import 'package:flutterin/components/myButton.dart';
 import 'package:flutterin/components/textField.dart';
 import 'package:flutterin/models/colorConstants.dart';
+import 'package:flutterin/pages/subs/moodTracker.dart';
 
 class loginPage extends StatelessWidget {
   loginPage({super.key});
@@ -81,9 +82,8 @@ class loginPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {
-                  return const navHomePage();
+                  return const moodTrackerPage();
                 }));
-                Navigator.of(context).pushNamed('/home');
               },
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.resolveWith(
