@@ -41,13 +41,13 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBn1DGwZ7rmYqt9ZRr2EfJxihdTDwZDbWQ',
-    appId: '1:27134652194:web:2dee541b7e4faa9d56bf7b',
-    messagingSenderId: '27134652194',
-    projectId: 'bejoy-57486',
-    authDomain: 'bejoy-57486.firebaseapp.com',
-    storageBucket: 'bejoy-57486.appspot.com',
-    measurementId: 'G-LT35XH4RH5',
+    apiKey: 'AIzaSyAIYIQj2jlfAHNScdEpHX-n26EJW6CoqXY',
+    appId: '1:142928827833:web:15b2ee22b6f30a82899268',
+    messagingSenderId: '142928827833',
+    projectId: 'bejoy-cd9ed',
+    authDomain: 'bejoy-cd9ed.firebaseapp.com',
+    storageBucket: 'bejoy-cd9ed.appspot.com',
+    measurementId: 'G-QN8LBVN8NE',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -59,30 +59,31 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCIQ1a-y7YAlbpZQALWSRMLuPyxpxf9OJ0',
-    appId: '1:27134652194:ios:7065a2bd84fb606556bf7b',
-    messagingSenderId: '27134652194',
-    projectId: 'bejoy-57486',
-    storageBucket: 'bejoy-57486.appspot.com',
-    iosBundleId: 'com.example.flutterin',
+    apiKey: 'AIzaSyBflxZwSRGSNZeZYCP5O78wc2Vs44PBYkU',
+    appId: '1:142928827833:ios:d92e3967cd798431899268',
+    messagingSenderId: '142928827833',
+    projectId: 'bejoy-cd9ed',
+    storageBucket: 'bejoy-cd9ed.appspot.com',
+    iosBundleId: 'com.testing.flutterin',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCIQ1a-y7YAlbpZQALWSRMLuPyxpxf9OJ0',
-    appId: '1:27134652194:ios:7065a2bd84fb606556bf7b',
-    messagingSenderId: '27134652194',
-    projectId: 'bejoy-57486',
-    storageBucket: 'bejoy-57486.appspot.com',
+    apiKey: 'AIzaSyBflxZwSRGSNZeZYCP5O78wc2Vs44PBYkU',
+    appId: '1:142928827833:ios:457d8b5afc4a9437899268',
+    messagingSenderId: '142928827833',
+    projectId: 'bejoy-cd9ed',
+    storageBucket: 'bejoy-cd9ed.appspot.com',
     iosBundleId: 'com.example.flutterin',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBn1DGwZ7rmYqt9ZRr2EfJxihdTDwZDbWQ',
-    appId: '1:27134652194:web:6fd47dd5c692d4d356bf7b',
-    messagingSenderId: '27134652194',
-    projectId: 'bejoy-57486',
-    authDomain: 'bejoy-57486.firebaseapp.com',
-    storageBucket: 'bejoy-57486.appspot.com',
-    measurementId: 'G-ZKP0SZ6SZ7',
+    apiKey: 'AIzaSyAIYIQj2jlfAHNScdEpHX-n26EJW6CoqXY',
+    appId: '1:142928827833:web:60787694d0ca906b899268',
+    messagingSenderId: '142928827833',
+    projectId: 'bejoy-cd9ed',
+    authDomain: 'bejoy-cd9ed.firebaseapp.com',
+    storageBucket: 'bejoy-cd9ed.appspot.com',
+    measurementId: 'G-VJBY25LSK1',
   );
+
 }

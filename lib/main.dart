@@ -7,36 +7,40 @@ import 'package:flutterin/pages/home.dart';
 import 'package:flutterin/pages/subs/meditation_base.dart';
 import 'package:flutterin/pages/subs/moodQuest.dart';
 import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
-  // Change the background color:
-  //runApp(Container(color:Colors.lightGreen));
-
-  /* MATERIAL DESIGN 
-  Google complements made for flutter.
-  - We always start with MaterialApp() widgtes.
-  - MaterialApp() requires Material() widgets.
-  */
   WidgetsFlutterBinding.ensureInitialized();
+  /*
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  */
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final Future<FirebaseApp> _firebaseApp = Firebase.initializeApp();
+
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Urbanist'),
-      // Use Scaffold Widget instead of Material:
-      home: loginPage(),
-      //home: meditationTemplate(),
-      //home: moodTracker(),
-
+      home: FutureBuilder(
+          future: _firebaseApp,
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              print('There is an error somewhere around here...');
+              return Text('Somethin went WRONG! PIPIPI');
+            } else if (snapshot.hasData) {
+              return loginPage();
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          }),
       routes: {
         '/home': (context) => navHomePage(),
         '/painRelief': (context) => meditationTemplate(

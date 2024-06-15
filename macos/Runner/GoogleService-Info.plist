@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCIQ1a-y7YAlbpZQALWSRMLuPyxpxf9OJ0</string>
+	<string>AIzaSyBflxZwSRGSNZeZYCP5O78wc2Vs44PBYkU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>27134652194</string>
+	<string>142928827833</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.flutterin</string>
 	<key>PROJECT_ID</key>
-	<string>bejoy-57486</string>
+	<string>bejoy-cd9ed</string>
 	<key>STORAGE_BUCKET</key>
-	<string>bejoy-57486.appspot.com</string>
+	<string>bejoy-cd9ed.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:27134652194:ios:7065a2bd84fb606556bf7b</string>
+	<string>1:142928827833:ios:457d8b5afc4a9437899268</string>
 </dict>
 </plist>
