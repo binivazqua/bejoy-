@@ -5,12 +5,13 @@ import 'package:flutterin/components/myButton.dart';
 import 'package:flutterin/components/textField.dart';
 import 'package:flutterin/models/colorConstants.dart';
 import 'package:flutterin/pages/subs/moodTracker.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class loginPage extends StatelessWidget {
   loginPage({super.key});
 
-  final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   void signUserIn() {}
   @override
@@ -53,12 +54,12 @@ class loginPage extends StatelessWidget {
                 )),
             textField(
               hintDesiredText: 'Username',
-              controller: usernameController,
+              controller: _usernameController,
               obscureText: false,
             ),
             textField(
               hintDesiredText: 'Password',
-              controller: passwordController,
+              controller: _passwordController,
               obscureText: true,
             ),
             TextButton(
