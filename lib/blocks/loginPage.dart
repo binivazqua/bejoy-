@@ -1,22 +1,37 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/components/logoTile.dart';
-import 'package:flutterin/components/myButton.dart';
 import 'package:flutterin/components/textField.dart';
 import 'package:flutterin/models/colorConstants.dart';
 import 'package:flutterin/pages/subs/moodTracker.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutterin/pages/subs/registerPage.dart';
 
-class loginPage extends StatelessWidget {
-  loginPage({super.key});
+class loginPagee extends StatefulWidget {
+  const loginPagee({super.key});
 
-  final _usernameController = TextEditingController();
+  @override
+  State<loginPagee> createState() => _loginPageeState();
+}
+
+class _loginPageeState extends State<loginPagee> {
+  final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  void signUserIn() {}
+  Future signInUser() async {
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text.trim());
+  }
+
+  @override
+  void _dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Center(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -53,8 +68,8 @@ class loginPage extends StatelessWidget {
                   fontFamily: 'Urbanist',
                 )),
             textField(
-              hintDesiredText: 'Username',
-              controller: _usernameController,
+              hintDesiredText: 'Email',
+              controller: _emailController,
               obscureText: false,
             ),
             textField(
@@ -64,7 +79,8 @@ class loginPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                print('Button clicked.');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => registerPage()));
               },
               child: const Text(
                 'New to Bejoy? Register!',
@@ -119,9 +135,3 @@ class loginPage extends StatelessWidget {
     );
   }
 }
-
-// FIX MATERIAL COLOR:
-/*
-backgroundColor: MaterialStateProperty.resolveWith(
-                      (states) => Colors.yellow[500])),
-*/

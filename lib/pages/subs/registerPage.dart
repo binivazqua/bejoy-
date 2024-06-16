@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterin/blocks/loginPage.dart';
 import 'package:flutterin/components/textField.dart';
 
 class registerPage extends StatefulWidget {
@@ -106,16 +107,30 @@ class _registerPageState extends State<registerPage> {
                   hintDesiredText: 'Contraseña',
                   controller: _password,
                   obscureText: false),
-              ElevatedButton(
-                onPressed: signUp,
-                child: Text(
-                  'Register me!',
-                  style: TextStyle(color: Colors.white),
-                ),
-                style: ButtonStyle(
-                    backgroundColor: WidgetStateColor.resolveWith(
-                  (states) => Color.fromARGB(150, 205, 51, 255),
-                )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: signUp,
+                    child: Text(
+                      'Register me!',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    style: ButtonStyle(
+                        backgroundColor: WidgetStateColor.resolveWith(
+                      (states) => Color.fromARGB(150, 205, 51, 255),
+                    )),
+                  ),
+                  SizedBox(width: 20),
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => loginPagee()));
+                      },
+                      child: const Text('Go to login!'))
+                ],
               ),
               Padding(
                 padding:
@@ -125,7 +140,7 @@ class _registerPageState extends State<registerPage> {
                   softWrap: true,
                   textAlign: TextAlign.center,
                 ),
-              )
+              ),
             ],
           ),
         ),

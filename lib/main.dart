@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterin/blocks/loginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutterin/blocks/loginPagee.dart';
 import 'package:flutterin/blocks/navHomePage.dart';
 import 'package:flutterin/models/meditationConstants.dart';
 import 'package:flutterin/pages/home.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
               print('There is an error somewhere around here...');
               return Text('Somethin went WRONG! PIPIPI');
             } else if (snapshot.hasData) {
-              return registerPage();
+              return loginPagee();
             } else {
               return Center(child: CircularProgressIndicator());
             }
