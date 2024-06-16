@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -18,6 +19,7 @@ class UserHome extends StatefulWidget {
 
 class _UserHomeState extends State<UserHome> {
   final _textController = TextEditingController();
+  final user = FirebaseAuth.instance.currentUser;
   String myWord = 'New Word';
 
   @override
@@ -30,24 +32,30 @@ class _UserHomeState extends State<UserHome> {
         child: SafeArea(
           child: Column(mainAxisSize: MainAxisSize.max, children: [
             // user app bar
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Hey!',
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hey!',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontFamily: 'Yomogi'),
+                  ),
+                  Text('${user!.email}',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, fontFamily: 'Yomogi'),
-                    ),
-                    Text('Biniza Vazquez',
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontFamily: 'Jua',
-                            fontWeight: FontWeight.w100)),
-                  ],
-                ),
+                          fontSize: 25,
+                          fontFamily: 'Jua',
+                          fontWeight: FontWeight.w100)),
+                ],
+              ),
+              IconButton(
+                onPressed: () {
+                  FirebaseAuth.instance.signOut();
+                },
+                icon: Icon(Icons.arrow_circle_right_rounded),
+                iconSize: 40,
+              )
+              /*
                 Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -63,7 +71,8 @@ class _UserHomeState extends State<UserHome> {
                         },
                         icon: Icon(Icons.person))),
               ],
-            ),
+              */
+            ]),
 
             SizedBox(height: 20),
 
