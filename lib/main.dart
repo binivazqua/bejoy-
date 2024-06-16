@@ -6,6 +6,7 @@ import 'package:flutterin/models/meditationConstants.dart';
 import 'package:flutterin/pages/home.dart';
 import 'package:flutterin/pages/subs/meditation_base.dart';
 import 'package:flutterin/pages/subs/moodQuest.dart';
+import 'package:flutterin/pages/subs/registerPage.dart';
 import 'firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
               print('There is an error somewhere around here...');
               return Text('Somethin went WRONG! PIPIPI');
             } else if (snapshot.hasData) {
-              return loginPage();
+              return registerPage();
             } else {
               return Center(child: CircularProgressIndicator());
             }
