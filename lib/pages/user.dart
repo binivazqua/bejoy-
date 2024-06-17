@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterin/components/audioPlayer.dart';
+import 'package:flutterin/pages/subs/userData.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -29,7 +30,12 @@ class ProfilePage extends StatelessWidget {
                       child: Icon(Icons.person, size: 60, color: Colors.purple),
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => userData()));
+                      },
                       child: const CircleAvatar(
                           backgroundColor: Colors.orange,
                           radius: 12,

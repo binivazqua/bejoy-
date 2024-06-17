@@ -32,10 +32,10 @@ class _loginPageeState extends State<loginPagee> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
           // in Scaffold 'child' changes to 'body'.
           // ALIGN ITEMS -> CSS
 
@@ -96,12 +96,7 @@ class _loginPageeState extends State<loginPagee> {
             //myButton(),
 
             ElevatedButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return const moodTrackerPage();
-                }));
-              },
+              onPressed: signInUser,
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.resolveWith(
                       (states) => colorConstants.yellowish)),

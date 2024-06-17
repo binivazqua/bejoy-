@@ -69,79 +69,81 @@ class _registerPageState extends State<registerPage> {
     }
 
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                '¿Nuevo aquí?',
-                style: TextStyle(fontSize: 20),
-              ),
-              Text(
-                'Solo hacen falta un par de datos',
-                softWrap: true,
-              ),
-              Text('para empezar a fluir...'),
-              SizedBox(
-                height: 20,
-              ),
-              textField(
-                  hintDesiredText: 'Primer nombre',
-                  controller: _name,
-                  obscureText: false),
-              textField(
-                  hintDesiredText: 'Apellido',
-                  controller: _lastname,
-                  obscureText: false),
-              textField(
-                  hintDesiredText: 'Me gusta que me llamen...',
-                  controller: _username,
-                  obscureText: false),
-              textField(
-                  hintDesiredText: 'Email',
-                  controller: _email,
-                  obscureText: false),
-              textField(
-                  hintDesiredText: 'Contraseña',
-                  controller: _password,
-                  obscureText: false),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: signUp,
-                    child: Text(
-                      'Register me!',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor: WidgetStateColor.resolveWith(
-                      (states) => Color.fromARGB(150, 205, 51, 255),
-                    )),
-                  ),
-                  SizedBox(width: 20),
-                  ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => loginPagee()));
-                      },
-                      child: const Text('Go to login!'))
-                ],
-              ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                child: Text(
-                  '$_message. $account',
-                  softWrap: true,
-                  textAlign: TextAlign.center,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '¿Nuevo aquí?',
+                  style: TextStyle(fontSize: 20),
                 ),
-              ),
-            ],
+                Text(
+                  'Solo hacen falta un par de datos',
+                  softWrap: true,
+                ),
+                Text('para empezar a fluir...'),
+                SizedBox(
+                  height: 20,
+                ),
+                textField(
+                    hintDesiredText: 'Primer nombre',
+                    controller: _name,
+                    obscureText: false),
+                textField(
+                    hintDesiredText: 'Apellido',
+                    controller: _lastname,
+                    obscureText: false),
+                textField(
+                    hintDesiredText: 'Me gusta que me llamen...',
+                    controller: _username,
+                    obscureText: false),
+                textField(
+                    hintDesiredText: 'Email',
+                    controller: _email,
+                    obscureText: false),
+                textField(
+                    hintDesiredText: 'Contraseña',
+                    controller: _password,
+                    obscureText: false),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: signUp,
+                      child: Text(
+                        'Register me!',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      style: ButtonStyle(
+                          backgroundColor: WidgetStateColor.resolveWith(
+                        (states) => Color.fromARGB(150, 205, 51, 255),
+                      )),
+                    ),
+                    SizedBox(width: 20),
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => loginPagee()));
+                        },
+                        child: const Text('Go to login!'))
+                  ],
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  child: Text(
+                    '$_message. $account',
+                    softWrap: true,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
