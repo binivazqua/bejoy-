@@ -19,14 +19,13 @@ class _userDataState extends State<userData> {
   final TextEditingController _diagnostic = TextEditingController();
   final TextEditingController _color = TextEditingController();
 
-  Future addUserDetails(String name, String lastname, String age, String, color,
-      String gender) async {
+  Future addUserDetails() async {
     await FirebaseFirestore.instance.collection('users').add({
-      'first name': name,
-      'last name': lastname,
-      'age': age,
-      'color': color,
-      'gender': gender,
+      'first name': _name.text.trim(),
+      'last name': _lastname.text.trim(),
+      'age': _age.text.trim(),
+      'color': _gender.text.trim(),
+      'gender': _color.text.trim()
     });
   }
 
@@ -64,7 +63,7 @@ class _userDataState extends State<userData> {
                 controller: _color,
                 obscureText: false),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: addUserDetails,
               child: Text(
                 'Send Data',
                 style: TextStyle(color: Colors.white),
